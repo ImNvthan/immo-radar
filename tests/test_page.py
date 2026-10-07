@@ -21,9 +21,10 @@ def test_page_complete(tmp_path):
                   {"url": "javascript:alert(1)", "type_local": "Maison", "commune": "Autre", "surface": 90, "prix": 150000, "ecart": -0.2,
                    "rendement_net": 0.06, "opportunite": True}]).to_csv(tmp_path / "opportunites.csv", index=False)
     html = page.generer_page(tmp_path, tmp_path / "index.html")
-    assert "Département 49" in html and "<polyline" in html and "<rect" in html
+    assert "Département 49" in html and "<polyline" in html and "<polygon class='forme'" in html
     assert "Ville &lt;b&gt;" in html  # échappement
     assert "href='https://www.pap.fr/annonce/x'" in html
     assert "javascript:" not in html  # liens non http refusés
     assert "viewport" in html
-    assert "<script" not in html and "http://" not in html.replace("http://www.w3.org", "")
+    assert "<script src" not in html and "<link" not in html  # aucune ressource externe
+    assert "@import" not in html and "url(http" not in html
