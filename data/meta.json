@@ -2,5 +2,12 @@
  "zone": "Département 72",
  "derniere_vente": "2025-12-31",
  "budget_max": 0.0,
- "surface_min": 0.0
+ "surface_min": 0.0,
+ "seuils": {
+  "marge_negociation": 0.05,
+  "decote_min": 0.08,
+  "rendement_net_min": 0.045,
+  "charges_et_vacance": 0.25
+ },
+ "min_ventes": 15
 }

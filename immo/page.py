@@ -105,18 +105,42 @@ footer p{max-width:46em}
 /* commutateur : sans JavaScript, tout reste visible */
 body[data-type="Appartement"] [data-for]:not([data-for="Appartement"]),
 body[data-type="Maison"] [data-for]:not([data-for="Maison"]){display:none}
+
+/* interactivité (visible uniquement avec JavaScript) */
+.js-only{display:none}.js .js-only{display:block}.js .statique{display:none}
+.criteres{margin-top:-28px;position:relative;z-index:2}
+.champs{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.champ{display:flex;flex-direction:column;gap:6px}
+.champ label{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--doux)}
+.champ input,.champ select{font:inherit;font-size:1.05rem;color:var(--encre);background:var(--papier);border:1.5px solid var(--trait);border-radius:14px;padding:12px 14px;width:100%;min-height:48px}
+.champ input:focus,.champ select:focus{border-color:var(--bleu);outline:none;box-shadow:0 0 0 3px rgba(27,43,255,.25)}
+.champ.case{flex-direction:row;align-items:center;gap:10px;min-height:48px;align-self:end}
+.champ.case input{width:22px;min-height:22px;height:22px;accent-color:var(--bleu)}
+.champ.case label{text-transform:none;font-family:inherit;font-size:1rem;letter-spacing:0;color:var(--encre)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:18px}
+button.btn{font:inherit;font-weight:700;border:0;background:var(--bleu);color:#fff;padding:13px 24px;border-radius:999px;cursor:pointer;min-height:48px}
+button.btn:disabled{opacity:.4;cursor:not-allowed}
+button.btn.sec{background:transparent;color:var(--encre);border:1.5px solid var(--trait)}
+.note{color:var(--doux);font-size:.88rem;margin:12px 0 0}
+.etoile{border:0;background:transparent;color:var(--signal);font-size:1.3rem;line-height:1;cursor:pointer;padding:2px 8px;margin-left:4px;min-width:36px;min-height:36px}
+#compte-communes{color:var(--doux);margin:0 0 6px}
+.resultat{margin-top:22px}
+.verdict{border-radius:18px;padding:16px 20px;background:var(--trait);margin-bottom:14px;font-size:1.1rem}
+.verdict.oui{background:var(--menthe-fond)}.verdict.non{background:var(--signal-fond)}
+.chiffres{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:0}
+.chiffres div{background:var(--papier);border-radius:16px;padding:14px 16px}
+.chiffres dt{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--doux)}
+.chiffres dd{margin:6px 0 0;font-family:var(--display);font-weight:800;font-size:1.6rem;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.chiffres dd small{display:block;font-family:system-ui,sans-serif;font-size:.75rem;font-weight:500;letter-spacing:0;color:var(--doux)}
+.chiffres dd.hausse{color:var(--signal)}.chiffres dd.baisse{color:var(--menthe)}
+.opp.top{border:2px solid var(--menthe)}
+.opp .decote.cher{color:var(--signal)}
+.opp .suppr{font:inherit;font-size:.85rem;background:transparent;border:0;color:var(--doux);text-decoration:underline;cursor:pointer;padding:6px 0;text-align:left}
+.sous-titre{font-family:var(--display);font-weight:800;letter-spacing:-.03em;font-size:1.5rem;margin:40px 0 14px}
 @media (prefers-reduced-motion:reduce){.hero .radar-bg .sweep,.radar .balai{animation:none}html{scroll-behavior:auto}}
 """
 
-JS = """
-(function(){
-var b=document.body,bt=document.querySelectorAll('.commutateur button'),sw=document.querySelector('.commutateur');
-if(!sw||!bt.length)return;
-function choisir(t){b.setAttribute('data-type',t);bt.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.type===t)})}
-bt.forEach(function(x){x.addEventListener('click',function(){choisir(x.dataset.type)})});
-sw.hidden=false;choisir(bt[0].dataset.type);
-})();
-"""
+JS = (Path(__file__).parent / "page.js").read_text(encoding="utf-8")
 
 
 def e(x):
@@ -325,16 +349,48 @@ def bloc_communes(stats, types, meta) -> str:
     crit = ""
     if meta.get("budget_max") or meta.get("surface_min"):
         crit = f" Critères appliqués : budget maximum {entier(meta.get('budget_max', 0))} €, surface minimale {entier(meta.get('surface_min', 0))} m²."
-    cartes = "".join(f"<div class='carte' data-for='{e(t)}'>{liste_communes(stats, t)}</div>" for t in types)
-    return ("<section class='bloc'><div class='wrap'><p class='mono'>Communes</p><h2>Où le rendement est le plus fort</h2>"
-            "<p class='intro'>Classement par rendement brut indicatif, communes à échantillon fiable uniquement. La barre compare les communes entre elles."
-            f"{e(crit)}</p>{cartes}</div></section>")
+    cartes = "".join(f"<div class='carte statique' data-for='{e(t)}'>{liste_communes(stats, t)}</div>" for t in types)
+    return ("<section class='bloc' id='communes'><div class='wrap'><p class='mono'>Communes</p><h2>Où le rendement est le plus fort</h2>"
+            "<p class='intro'>Classement par rendement brut indicatif, communes à échantillon fiable uniquement. La barre compare les communes entre elles. "
+            f"Ajuste tes critères en haut de page : la liste se met à jour tout de suite.{e(crit)}</p>{cartes}"
+            "<div class='carte js-only'><p id='compte-communes' aria-live='polite'></p><div id='liste-communes'></div></div></div></section>")
+
+
+def bloc_criteres(meta) -> str:
+    return ("<section class='criteres js-only' aria-label='Mes critères'><div class='wrap'><div class='carte'>"
+            "<p class='mono'>Mes critères</p>"
+            "<div class='champs'>"
+            "<div class='champ'><label for='c-budget'>Budget maximum (€)</label><input id='c-budget' type='number' inputmode='numeric' min='0' step='5000' placeholder='Sans limite'></div>"
+            "<div class='champ'><label for='c-surface'>Surface minimale (m²)</label><input id='c-surface' type='number' inputmode='numeric' min='0' step='5' placeholder='Sans minimum'></div>"
+            "<div class='champ'><label for='c-q'>Chercher une commune</label><input id='c-q' type='search' autocomplete='off' placeholder='Le Mans, La Flèche…'></div>"
+            "<div class='champ'><label for='c-tri'>Trier par</label><select id='c-tri'><option value='rendement'>Rendement brut</option>"
+            "<option value='prix'>Prix au m² le plus bas</option><option value='evolution'>Baisse de prix sur 12 mois</option><option value='ventes'>Nombre de ventes</option></select></div>"
+            "<div class='champ case'><input id='c-fav' type='checkbox'><label for='c-fav'>Mes favoris seulement</label></div>"
+            "</div><div class='actions'><button type='button' class='btn sec' id='c-reset'>Effacer les critères</button></div>"
+            "<p class='note'>Avec un budget et une surface minimale, seules les communes où un tel bien reste dans ton budget sont gardées. "
+            "Tes critères, tes favoris et tes annonces restent sur cet appareil : rien n'est envoyé.</p></div></div></section>")
+
+
+def bloc_analyseur() -> str:
+    return ("<section class='bloc js-only' id='analyseur'><div class='wrap'><p class='mono'>Annonce</p><h2>Teste une annonce <span id='nb-annonces'></span></h2>"
+            "<p class='intro'>Recopie le prix et la surface d'une annonce vue ailleurs. Le radar la compare aux ventes réelles de la commune et estime le rendement net.</p>"
+            "<div class='carte'><form id='form-annonce' autocomplete='off'><div class='champs'>"
+            "<div class='champ'><label for='a-type'>Type de bien</label><select id='a-type'></select></div>"
+            "<div class='champ'><label for='a-commune'>Commune</label><input id='a-commune' list='liste-noms' placeholder='Commence à taper…'></div>"
+            "<div class='champ'><label for='a-surface'>Surface (m²)</label><input id='a-surface' type='number' inputmode='decimal' min='0' step='any'></div>"
+            "<div class='champ'><label for='a-prix'>Prix affiché (€)</label><input id='a-prix' type='number' inputmode='numeric' min='0' step='1000'></div>"
+            "<div class='champ'><label for='a-loyer'>Loyer visé (€/m², facultatif)</label><input id='a-loyer' type='number' inputmode='decimal' min='0' step='0.1' placeholder='Loyer du marché'></div>"
+            "<div class='champ'><label for='a-url'>Lien de l'annonce (facultatif)</label><input id='a-url' type='url' placeholder='https://…'></div>"
+            "</div><datalist id='liste-noms'></datalist>"
+            "<div id='resultat' class='resultat' aria-live='polite'></div>"
+            "<div class='actions'><button type='submit' class='btn' id='a-enreg' disabled>Enregistrer l'annonce</button></div></form></div>"
+            "<h3 class='sous-titre'>Mes annonces enregistrées</h3><div id='mes-annonces'></div></div></section>")
 
 
 def bloc_opportunites(opp) -> str:
     if opp.empty:
-        corps = ("<div class='vide'><b>Aucune annonce à analyser.</b>Ajoute des lignes dans annonces.csv, "
-                 "ou branche l'import par e-mail pour les recevoir automatiquement.</div>")
+        corps = ("<div class='vide'><b>Aucune annonce suivie automatiquement.</b>Teste une annonce plus haut : elle s'enregistre sur ton appareil. "
+                 "L'import par e-mail alimente cette section une fois activé.</div>")
     else:
         bonnes = opp[opp["opportunite"].astype(str) == "True"]
         if bonnes.empty:
@@ -349,8 +405,27 @@ def bloc_opportunites(opp) -> str:
                     f"<span class='lieu'>{e(r['commune'])}</span><span>{e(r['type_local'])} &middot; {r['surface']:.0f} m² &middot; {entier(r['prix'])} €</span>"
                     f"<span>Rendement net estimé {fr(r['rendement_net'] * 100)} %</span>{lien}</article>")
             corps = f"<div class='opps'>{''.join(cartes)}</div>"
-    return ("<section class='bloc'><div class='wrap'><p class='mono'>Annonces</p><h2>Opportunités en cours</h2>"
-            f"<p class='intro'>Annonces dont le prix ressort nettement sous la médiane des ventes de la commune, avec un rendement net correct.</p>{corps}</div></section>")
+    return ("<section class='bloc'><div class='wrap'><p class='mono'>Annonces</p><h2>Annonces suivies par le radar</h2>"
+            f"<p class='intro'>Annonces de annonces.csv ou de l'import e-mail dont le prix ressort nettement sous la médiane des ventes de la commune.</p>{corps}</div></section>")
+
+
+def donnees_js(stats, meta, types) -> dict:
+    """Données embarquées pour le filtrage et l'analyse d'annonces côté navigateur."""
+    def v(x, nd):
+        return None if x is None or pd.isna(x) else round(float(x), nd)
+
+    communes = []
+    if not stats.empty:
+        for _, r in stats.iterrows():
+            communes.append({
+                "c": str(r["nom_commune"]), "k": str(r.get("code_commune", r["nom_commune"])), "t": r["type_local"], "p": v(r["prix_m2_median"], 0),
+                "n": int(r["n_ventes"]), "e": v(r["evolution_12m"], 4), "l": v(r["loyer_m2"], 2), "o": str(r["loyer_origine"]),
+                "r": v(r["rendement_brut"], 4), "f": bool(r["fiable"]),
+            })
+    seuils = {"marge_negociation": 0.05, "decote_min": 0.08, "rendement_net_min": 0.045, "charges_et_vacance": 0.25}
+    seuils.update(meta.get("seuils") or {})
+    return {"types": types, "communes": communes, "seuils": seuils,
+            "budget_max": meta.get("budget_max", 0) or 0, "surface_min": meta.get("surface_min", 0) or 0}
 
 
 def generer_page(data_dir, sortie) -> str:
@@ -365,13 +440,16 @@ def generer_page(data_dir, sortie) -> str:
     presents = set(tend["type_local"]) | (set(stats["type_local"]) if not stats.empty else set())
     types = [t for t in TYPES if t in presents] or list(TYPES)
 
+    donnees = json.dumps(donnees_js(stats, meta, types), ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+
     page = f"""<!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark"><meta name="theme-color" content="#1b2bff">
 <title>Radar immobilier</title><style>{CSS}</style></head><body>
 {bloc_hero(tend, meta, types)}
-<main>{bloc_courbe(serie, types)}{bloc_saison(saison, types)}{bloc_communes(stats, types, meta)}{bloc_opportunites(opp)}</main>
-<footer><div class="wrap"><p><b>Indicateurs statistiques, pas un conseil en investissement.</b> Les prix viennent des ventes réelles (DVF, Etalab, Licence Ouverte) et les loyers de la carte des loyers ANIL (Licence Ouverte 2.0) ou de config.yml. Page régénérée à chaque exécution du workflow.</p></div></footer>
+<main>{bloc_criteres(meta)}{bloc_courbe(serie, types)}{bloc_saison(saison, types)}{bloc_communes(stats, types, meta)}{bloc_analyseur()}{bloc_opportunites(opp)}</main>
+<footer><div class="wrap"><p><b>Indicateurs statistiques, pas un conseil en investissement.</b> Les prix viennent des ventes réelles (DVF, Etalab, Licence Ouverte) et les loyers de la carte des loyers ANIL (Licence Ouverte 2.0) ou de config.yml. Page régénérée à chaque exécution du workflow. Tes critères et tes annonces restent dans ton navigateur.</p></div></footer>
+<script type="application/json" id="donnees">{donnees}</script>
 <script>{JS}</script></body></html>
 """
     sortie = Path(sortie)

@@ -507,6 +507,7 @@ def ecrire_meta(cfg, ref, data_dir):
     meta = {
         "zone": libelle_zone(cfg), "derniere_vente": str(ref.date()),
         "budget_max": cfg["budget_max"], "surface_min": cfg["surface_min"],
+        "seuils": cfg["annonces"], "min_ventes": cfg["min_ventes"],
     }
     (data_dir / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 

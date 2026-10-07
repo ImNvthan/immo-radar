@@ -1,3 +1,5 @@
+import json
+
 import pandas as pd
 
 from immo import page
@@ -28,3 +30,16 @@ def test_page_complete(tmp_path):
     assert "viewport" in html
     assert "<script src" not in html and "<link" not in html  # aucune ressource externe
     assert "@import" not in html and "url(http" not in html
+
+
+def test_page_donnees_embarquees_et_interactivite(tmp_path):
+    pd.DataFrame([{"nom_commune": "Ville </script>", "type_local": "Maison", "prix_m2_median": 2000, "n_ventes": 30, "evolution_12m": None,
+                   "loyer_m2": 9.5, "loyer_origine": "ANIL 2025", "rendement_brut": 0.057, "fiable": True, "dans_budget": True,
+                   "code_commune": "72001"}]).to_csv(tmp_path / "marche_communes.csv", index=False)
+    html = page.generer_page(tmp_path, tmp_path / "index.html")
+    brut = html.split('id="donnees">')[1].split("</script>")[0]
+    d = json.loads(brut)  # JSON valide malgré le nom piégé
+    assert d["communes"][0]["k"] == "72001" and d["communes"][0]["e"] is None
+    assert d["seuils"]["decote_min"] == 0.08
+    for ident in ("c-budget", "c-surface", "c-q", "form-annonce", "a-commune", "liste-communes", "mes-annonces"):
+        assert f'id="{ident}"' in html or f"id='{ident}'" in html
