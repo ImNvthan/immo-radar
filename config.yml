@@ -1,0 +1,22 @@
+# Zone analysée (code département, 2 ou 3 caractères)
+zone:
+  departement: "49"
+  nb_annees: 3          # nombre d'années DVF chargées (année en cours incluse)
+
+# Echantillon minimum de ventes pour qu'une moyenne soit jugée fiable
+min_ventes: 15
+
+# Loyers de marché en euros par m2 et par mois (A ADAPTER, ce sont des estimations)
+loyer_m2_defaut:
+  Appartement: 12.0
+  Maison: 10.0
+# Exemple de surcharge par commune (nom sans accent, en minuscules)
+loyers_communes: {}
+#  angers: 13.5
+
+# Réglages de scoring des annonces (fichier annonces.csv)
+annonces:
+  marge_negociation: 0.05      # remise moyenne supposée entre prix affiché et prix signé
+  decote_min: 0.08             # décote minimale vs médiane DVF pour signaler une opportunité
+  rendement_net_min: 0.045     # rendement net estimé minimal
+  charges_et_vacance: 0.25     # part du loyer perdue en charges, taxe foncière, vacance
