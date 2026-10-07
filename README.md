@@ -15,7 +15,7 @@ Chaque jour, le workflow `immo-radar` :
 ## Mise en route
 
 1. Fork ou clone ce dépôt en **public** (minutes GitHub Actions illimitées). En privé, les 2 000 minutes gratuites par mois suffisent largement : un run dure environ une minute.
-2. Ouvre `config.yml` et **change le département** : `49` (Maine-et-Loire) n'est qu'un exemple. Ajuste aussi le budget, la surface minimale et les seuils.
+2. Ouvre `config.yml` et **vérifie le département** : le dépôt est réglé sur la Sarthe (`72`), change le code pour une autre zone. Ajuste aussi le budget, la surface minimale et les seuils.
 3. Onglet **Actions**, workflow `immo-radar`, bouton **Run workflow** pour le premier lancement.
 4. Lis `data/rapport.md` (mis à jour chaque jour) ou la page de suivi décrite plus bas.
 
@@ -23,7 +23,7 @@ Chaque jour, le workflow `immo-radar` :
 
 | Clé | Rôle |
 |---|---|
-| `zone.departements` | Liste de codes département (`["44", "49"]`, `"2A"`, `"974"` acceptés). L'ancien format `departement: "49"` fonctionne toujours. **Valeur par défaut `49` : à changer.** |
+| `zone.departements` | Liste de codes département (`["44", "49"]`, `"2A"`, `"974"` acceptés). L'ancien format `departement: "49"` fonctionne toujours. Réglé sur `72` (Sarthe) ; sans cette clé, le code retombe sur `49`. |
 | `zone.communes` | Optionnel. Restreint l'analyse à ces communes (nom ou code INSEE). Sans département, il est déduit des codes INSEE. Vide : tout le département. |
 | `zone.nb_annees` | Nombre d'années DVF chargées (les plus récentes disponibles, 3 par défaut). |
 | `min_ventes` | Nombre minimal de ventes pour qu'une commune soit jugée fiable (15). |

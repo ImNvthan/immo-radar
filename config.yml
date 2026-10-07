@@ -1,7 +1,7 @@
 # ZONE ANALYSEE
-# Le département 49 (Maine-et-Loire) est une valeur d'exemple : A CHANGER pour ta zone.
+# Zone : Sarthe (72). Pour une autre zone, change le code (ex. 49 pour le Maine-et-Loire).
 zone:
-  departements: ["49"]   # un ou plusieurs codes (ex. ["44", "49", "85"]). L'ancien format `departement: "49"` reste accepté.
+  departements: ["72"]   # un ou plusieurs codes (ex. ["44", "49", "85"]). L'ancien format `departement: "49"` reste accepté.
   communes: []           # optionnel : restreint l'analyse à ces communes (nom ou code INSEE). Vide = tout le département.
   #  exemple : ["Angers", "49099", "Saumur"]
   nb_annees: 3           # nombre d'années DVF chargées (les plus récentes disponibles)

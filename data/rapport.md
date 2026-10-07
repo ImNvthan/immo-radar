@@ -1,22 +1,22 @@
 # Radar immobilier
 
-Département 49 | dernière vente DVF : 2025-12-31
+Département 72 | dernière vente DVF : 2025-12-31
 
 Indicateurs statistiques calculés sur les ventes réelles (DVF). Ce n'est pas un conseil en investissement.
 
 ## Quand acheter
 
 ### Appartement
-- Prix médian sur 12 mois : 2788 €/m² (2408 ventes)
-- Évolution sur 12 mois : -0,4 % | sur 6 mois : +2,3 %
+- Prix médian sur 12 mois : 1845 €/m² (1319 ventes)
+- Évolution sur 12 mois : +0,5 % | sur 6 mois : +4,9 %
 - Lecture : Prix globalement stables : pas de signal fort, le choix du bien pèse plus que le timing.
-- Saisonnalité historique : prix plus bas en déc., nov., mai ; plus hauts en juil., août, avr.
+- Saisonnalité historique : prix plus bas en mars, nov., juin ; plus hauts en juil., févr., janv.
 
 ### Maison
-- Prix médian sur 12 mois : 2064 €/m² (6319 ventes)
-- Évolution sur 12 mois : +1,3 % | sur 6 mois : +2,1 %
-- Lecture : Prix globalement stables : pas de signal fort, le choix du bien pèse plus que le timing.
-- Saisonnalité historique : prix plus bas en déc., nov., oct. ; plus hauts en juil., août, mai
+- Prix médian sur 12 mois : 1622 €/m² (5275 ventes)
+- Évolution sur 12 mois : +2,7 % | sur 6 mois : +0,3 %
+- Lecture : Prix en hausse : marché plus tendu, les bons biens partent vite et la négociation est plus limitée.
+- Saisonnalité historique : prix plus bas en déc., avr., mars ; plus hauts en août, janv., juil.
 
 ## Quoi regarder (communes)
 
@@ -26,36 +26,32 @@ Classement par rendement brut indicatif. Communes avec échantillon fiable uniqu
 
 | Commune | €/m² médian | Ventes 12m | Évol. 12m | Loyer €/m² | Origine loyer | Rend. brut |
 |---|---|---|---|---|---|---|
-| Segré-en-Anjou Bleu | 1188 | 19 | -11,5 % | 8,8 | ANIL 2025 | 8,9 % |
-| Saint-Barthélemy-d'Anjou | 2250 | 29 | -12,6 % | 12,7 | ANIL 2025 | 6,8 % |
-| Trélazé | 2174 | 29 | -2,5 % | 11,8 | ANIL 2025 | 6,5 % |
-| Saumur | 1749 | 156 | +5,0 % | 9,4 | ANIL 2025 | 6,5 % |
-| Cholet | 2044 | 224 | +7,4 % | 10,6 | ANIL 2025 | 6,2 % |
-| Chalonnes-sur-Loire | 2074 | 17 | n/d | 9,9 | ANIL 2025 | 5,8 % |
-| Avrillé | 2792 | 88 | -6,9 % | 12,7 | ANIL 2025 | 5,5 % |
-| Montreuil-Juigné | 2598 | 16 | n/d | 11,8 | ANIL 2025 | 5,5 % |
-| Les Ponts-de-Cé | 2788 | 42 | +9,8 % | 12,3 | ANIL 2025 | 5,3 % |
-| Angers | 3144 | 1653 | +0,0 % | 13,1 | ANIL 2025 | 5,0 % |
+| La Ferté-Bernard | 1067 | 34 | -13,1 % | 8,5 | ANIL 2025 | 9,6 % |
+| Allonnes | 1400 | 37 | +0,5 % | 9,7 | ANIL 2025 | 8,3 % |
+| La Flèche | 1365 | 22 | n/d | 9,2 | ANIL 2025 | 8,1 % |
+| Sablé-sur-Sarthe | 1466 | 19 | +23,3 % | 8,5 | ANIL 2025 | 7,0 % |
+| Le Mans | 1932 | 1152 | +1,9 % | 10,6 | ANIL 2025 | 6,6 % |
+| Coulaines | 1844 | 23 | +41,7 % | 9,7 | ANIL 2025 | 6,3 % |
 
 ### Maison
 
 | Commune | €/m² médian | Ventes 12m | Évol. 12m | Loyer €/m² | Origine loyer | Rend. brut |
 |---|---|---|---|---|---|---|
-| Mouliherne | 1203 | 16 | n/d | 8,3 | ANIL 2025 (maille) | 8,3 % |
-| Lys-Haut-Layon | 1314 | 76 | -7,5 % | 8,5 | ANIL 2025 | 7,8 % |
-| Vaudelnay | 1217 | 17 | n/d | 7,9 | ANIL 2025 (maille) | 7,8 % |
-| Noyant-Villages | 1083 | 61 | +4,1 % | 6,7 | ANIL 2025 | 7,5 % |
-| Terranjou | 1639 | 38 | -7,9 % | 10,0 | ANIL 2025 | 7,3 % |
-| Vernantes | 1411 | 19 | +20,9 % | 8,3 | ANIL 2025 (maille) | 7,1 % |
-| Brain-sur-Allonnes | 1433 | 15 | n/d | 8,3 | ANIL 2025 (maille) | 7,0 % |
-| Ombrée d'Anjou | 1220 | 100 | -0,4 % | 6,9 | ANIL 2025 | 6,8 % |
-| Yzernay | 1279 | 15 | n/d | 7,2 | ANIL 2025 (maille) | 6,7 % |
-| Morannes sur Sarthe-Daumeray | 1401 | 38 | +4,4 % | 7,5 | ANIL 2025 | 6,4 % |
-| Baugé-en-Anjou | 1503 | 133 | +7,4 % | 7,8 | ANIL 2025 | 6,2 % |
-| Mauges-sur-Loire | 1833 | 149 | -3,3 % | 9,3 | ANIL 2025 | 6,1 % |
-| Allonnes | 1746 | 18 | +6,6 % | 8,8 | ANIL 2025 | 6,1 % |
-| Bellevigne-en-Layon | 1706 | 46 | -7,1 % | 8,6 | ANIL 2025 | 6,1 % |
-| Longué-Jumelles | 1571 | 59 | +13,4 % | 7,9 | ANIL 2025 | 6,0 % |
+| Rouessé-Vassé | 852 | 15 | n/d | 6,0 | ANIL 2025 (maille) | 8,4 % |
+| Thorigné-sur-Dué | 1250 | 15 | n/d | 8,6 | ANIL 2025 | 8,3 % |
+| Pruillé-l'Éguillé | 1041 | 19 | n/d | 7,0 | ANIL 2025 (maille) | 8,1 % |
+| Volnay | 1107 | 19 | -17,0 % | 7,0 | ANIL 2025 (maille) | 7,6 % |
+| Le Breil-sur-Mérize | 1390 | 19 | -6,0 % | 8,8 | ANIL 2025 | 7,6 % |
+| Vaas | 1067 | 27 | -13,3 % | 6,6 | ANIL 2025 | 7,5 % |
+| Le Lude | 1148 | 48 | -0,2 % | 7,1 | ANIL 2025 | 7,5 % |
+| Sillé-le-Guillaume | 1039 | 40 | -12,1 % | 6,4 | ANIL 2025 | 7,4 % |
+| Fresnay-sur-Sarthe | 1036 | 48 | -0,6 % | 6,4 | ANIL 2025 | 7,4 % |
+| Fyé | 1103 | 16 | n/d | 6,6 | ANIL 2025 (maille) | 7,2 % |
+| La Chartre-sur-le-Loir | 1064 | 21 | +6,3 % | 6,4 | ANIL 2025 (maille) | 7,2 % |
+| Vibraye | 1088 | 28 | -13,8 % | 6,4 | ANIL 2025 | 7,0 % |
+| Bessé-sur-Braye | 1034 | 29 | -9,8 % | 6,0 | ANIL 2025 | 7,0 % |
+| Le Grand-Lucé | 1148 | 23 | -4,4 % | 6,7 | ANIL 2025 | 7,0 % |
+| Saint-Calais | 1051 | 34 | +26,1 % | 6,0 | ANIL 2025 | 6,9 % |
 
 ## Annonces
 

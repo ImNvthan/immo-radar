@@ -1,225 +1,368 @@
 code_commune,nom_commune,commune_norm,type_local,prix_m2_median,n_ventes,prix_m2_prec,n_prec,evolution_12m,loyer_m2,loyer_origine,rendement_brut,fiable,prix_bien_type,dans_budget
-49008,Angrie,angrie,Appartement,333.0,1,,,,7.65,ANIL 2025 (maille),0.2757,False,,True
-49373,Lys-Haut-Layon,lys haut layon,Appartement,812.0,2,,,,8.06,ANIL 2025,0.1192,False,,True
-49345,Bellevigne-en-Layon,bellevigne en layon,Appartement,1082.0,1,,,,9.97,ANIL 2025,0.1106,False,,True
-49218,Montrevault-sur-Èvre,montrevault sur evre,Appartement,1040.0,1,1593.0,1.0,,9.28,ANIL 2025,0.1071,False,,True
-49215,Montreuil-Bellay,montreuil bellay,Appartement,880.0,3,561.0,1.0,,7.33,ANIL 2025,0.0999,False,,True
-49048,Briollay,briollay,Appartement,1341.0,4,1513.0,4.0,,10.57,ANIL 2025 (maille),0.0946,False,,True
-49261,Gennes-Val-de-Loire,gennes val de loire,Appartement,1074.0,1,745.0,1.0,,8.15,ANIL 2025,0.091,False,,True
-49331,Segré-en-Anjou Bleu,segre en anjou bleu,Appartement,1188.0,19,1343.0,23.0,-0.1154,8.8,ANIL 2025,0.0889,True,,True
-49080,Les Hauts-d'Anjou,les hauts d anjou,Appartement,1209.0,2,,,,8.76,ANIL 2025,0.087,False,,True
-49086,Terranjou,terranjou,Appartement,1370.0,2,,,,9.74,ANIL 2025 (maille),0.0854,False,,True
-49301,Sèvremoine,sevremoine,Appartement,1412.0,4,,,,9.65,ANIL 2025,0.0821,False,,True
-49125,Doué-en-Anjou,doue en anjou,Appartement,1218.0,1,1195.0,1.0,,8.19,ANIL 2025,0.0807,False,,True
-49248,Ombrée d'Anjou,ombree d anjou,Appartement,1207.0,3,1431.0,2.0,,8.03,ANIL 2025,0.0799,False,,True
-49292,Val-du-Layon,val du layon,Appartement,1571.0,1,1118.0,1.0,,10.06,ANIL 2025 (maille),0.0768,False,,True
-49060,Bellevigne-les-Châteaux,bellevigne les chateaux,Appartement,1274.0,8,1466.0,2.0,,8.09,ANIL 2025 (maille),0.0762,False,,True
-49367,Erdre-en-Anjou,erdre en anjou,Appartement,1362.0,2,,,,8.47,ANIL 2025,0.0746,False,,True
-49200,Longuenée-en-Anjou,longuenee en anjou,Appartement,1750.0,3,1938.0,1.0,,10.86,ANIL 2025,0.0745,False,,True
-49176,Le Lion-d'Angers,le lion d angers,Appartement,1633.0,1,1620.0,1.0,,9.36,ANIL 2025,0.0688,False,,True
-49267,Saint-Barthélemy-d'Anjou,saint barthelemy d anjou,Appartement,2250.0,29,2574.0,30.0,-0.1258,12.74,ANIL 2025,0.0679,True,,True
-49244,Mauges-sur-Loire,mauges sur loire,Appartement,1527.0,4,1486.0,5.0,,8.61,ANIL 2025,0.0677,False,,True
-49026,Bécon-les-Granits,becon les granits,Appartement,1577.0,2,,,,8.83,ANIL 2025,0.0672,False,,True
-49333,Seiches-sur-le-Loir,seiches sur le loir,Appartement,1667.0,3,1685.0,1.0,,9.24,ANIL 2025,0.0665,False,,True
-49353,Trélazé,trelaze,Appartement,2174.0,29,2229.0,23.0,-0.0245,11.84,ANIL 2025,0.0653,True,,True
-49023,Beaupréau-en-Mauges,beaupreau en mauges,Appartement,1650.0,13,1653.0,21.0,-0.0017,8.92,ANIL 2025,0.0649,False,,True
-49328,Saumur,saumur,Appartement,1749.0,156,1667.0,162.0,0.0496,9.43,ANIL 2025,0.0647,True,,True
-49307,Loire-Authion,loire authion,Appartement,1937.0,2,1903.0,1.0,,10.25,ANIL 2025,0.0635,False,,True
-49021,Beaufort-en-Anjou,beaufort en anjou,Appartement,1737.0,4,1000.0,3.0,,9.07,ANIL 2025,0.0626,False,,True
-49163,Jarzé Villages,jarze villages,Appartement,1653.0,1,988.0,1.0,,8.57,ANIL 2025 (maille),0.0622,False,,True
-49099,Cholet,cholet,Appartement,2044.0,224,1903.0,219.0,0.074,10.55,ANIL 2025,0.062,True,,True
-49018,Baugé-en-Anjou,bauge en anjou,Appartement,1714.0,4,1359.0,2.0,,8.67,ANIL 2025,0.0607,False,,True
-49347,Tiercé,tierce,Appartement,2047.0,12,1822.0,1.0,,10.24,ANIL 2025,0.06,False,,True
-49378,Vivy,vivy,Appartement,1615.0,1,1270.0,1.0,,7.94,ANIL 2025 (maille),0.059,False,,True
-49278,Sainte-Gemmes-sur-Loire,sainte gemmes sur loire,Appartement,2500.0,9,2576.0,7.0,,12.12,ANIL 2025,0.0582,False,,True
-49223,Mûrs-Erigné,murs erigne,Appartement,2561.0,11,2577.0,10.0,,12.38,ANIL 2025,0.058,False,,True
-49063,Chalonnes-sur-Loire,chalonnes sur loire,Appartement,2074.0,17,2122.0,14.0,,9.94,ANIL 2025,0.0575,True,,True
-49329,Savennières,savennieres,Appartement,2245.0,1,,,,10.74,ANIL 2025 (maille),0.0574,False,,True
-49272,Saint-Clément-des-Levées,saint clement des levees,Appartement,1700.0,1,,,,7.94,ANIL 2025 (maille),0.0561,False,,True
-49323,Verrières-en-Anjou,verrieres en anjou,Appartement,2585.0,4,2177.0,11.0,,11.84,ANIL 2025,0.055,False,,True
-49015,Avrillé,avrille,Appartement,2792.0,88,3000.0,91.0,-0.0693,12.75,ANIL 2025,0.0548,True,,True
-49214,Montreuil-Juigné,montreuil juigne,Appartement,2598.0,16,2804.0,11.0,,11.83,ANIL 2025,0.0546,True,,True
-49035,Bouchemaine,bouchemaine,Appartement,2812.0,5,2667.0,3.0,,12.73,ANIL 2025,0.0543,False,,True
-49246,Les Ponts-de-Cé,les ponts de ce,Appartement,2788.0,42,2540.0,31.0,0.0978,12.25,ANIL 2025,0.0527,True,,True
-49050,Brissac Loire Aubance,brissac loire aubance,Appartement,2731.0,1,2031.0,3.0,,11.41,ANIL 2025,0.0501,False,,True
-49007,Angers,angers,Appartement,3144.0,1653,3143.0,1397.0,0.0002,13.1,ANIL 2025,0.05,True,,True
-49129,Écouflant,ecouflant,Appartement,3122.0,2,3226.0,3.0,,12.46,ANIL 2025,0.0479,False,,True
-49092,Chemillé-en-Anjou,chemille en anjou,Appartement,2158.0,1,1125.0,3.0,,8.6,ANIL 2025,0.0478,False,,True
-49298,Saint-Léger-de-Linières,saint leger de linieres,Appartement,3000.0,3,2000.0,1.0,,11.02,ANIL 2025,0.0441,False,,True
-49020,Beaucouzé,beaucouze,Appartement,2927.0,9,3690.0,2.0,,10.47,ANIL 2025,0.0429,False,,True
-49194,Mazé-Milon,maze milon,Appartement,3333.0,1,3444.0,1.0,,10.3,ANIL 2025,0.0371,False,,True
-49126,Orée d'Anjou,oree d anjou,Appartement,3727.0,1,,,,10.13,ANIL 2025,0.0326,False,,True
-49038,Bourg-l'Évêque,bourg l eveque,Maison,638.0,4,1275.0,8.0,,6.8,ANIL 2025 (maille),0.1278,False,,True
-49237,La Pellerine,la pellerine,Maison,909.0,2,,,,7.33,ANIL 2025 (maille),0.0968,False,,True
-49061,Challain-la-Potherie,challain la potherie,Maison,906.0,7,1474.0,5.0,,7.05,ANIL 2025 (maille),0.0935,False,,True
-49236,Passavant-sur-Layon,passavant sur layon,Maison,1085.0,1,,,,8.4,ANIL 2025 (maille),0.0929,False,,True
-49369,Vernoil-le-Fourrier,vernoil le fourrier,Maison,1093.0,13,1385.0,19.0,-0.2105,8.34,ANIL 2025 (maille),0.0915,False,,True
-49310,Saint-Paul-du-Bois,saint paul du bois,Maison,819.0,10,1169.0,9.0,,6.18,ANIL 2025 (maille),0.0907,False,,True
-49064,Chambellay,chambellay,Maison,950.0,5,1480.0,6.0,,6.84,ANIL 2025 (maille),0.0864,False,,True
-49045,La Breille-les-Pins,la breille les pins,Maison,1184.0,7,1497.0,7.0,,8.34,ANIL 2025 (maille),0.0845,False,,True
-49221,Mouliherne,mouliherne,Maison,1203.0,16,1123.0,9.0,,8.34,ANIL 2025 (maille),0.0832,True,,True
-49291,Saint-Just-sur-Dive,saint just sur dive,Maison,1060.0,6,684.0,1.0,,7.32,ANIL 2025 (maille),0.0829,False,,True
-49102,Cléré-sur-Layon,clere sur layon,Maison,1220.0,7,1060.0,4.0,,8.4,ANIL 2025 (maille),0.0826,False,,True
-49373,Lys-Haut-Layon,lys haut layon,Maison,1314.0,76,1420.0,76.0,-0.0748,8.55,ANIL 2025,0.0781,True,,True
-49364,Vaudelnay,vaudelnay,Maison,1217.0,17,1657.0,12.0,,7.9,ANIL 2025 (maille),0.0779,True,,True
-49374,Villebernier,villebernier,Maison,1286.0,13,1502.0,14.0,,8.34,ANIL 2025 (maille),0.0778,False,,True
-49140,Fontevraud-l'Abbaye,fontevraud l abbaye,Maison,1038.0,14,1705.0,13.0,,6.56,ANIL 2025 (maille),0.0758,False,,True
-49209,Montigné-lès-Rairies,montigne les rairies,Maison,1154.0,3,1439.0,6.0,,7.26,ANIL 2025 (maille),0.0755,False,,True
-49228,Noyant-Villages,noyant villages,Maison,1083.0,61,1041.0,71.0,0.0411,6.74,ANIL 2025,0.0746,True,,True
-49086,Terranjou,terranjou,Maison,1639.0,38,1781.0,44.0,-0.0795,10.0,ANIL 2025,0.0732,True,,True
-49368,Vernantes,vernantes,Maison,1411.0,19,1168.0,18.0,0.2088,8.34,ANIL 2025 (maille),0.0709,True,,True
-49041,Brain-sur-Allonnes,brain sur allonnes,Maison,1433.0,15,1375.0,13.0,,8.34,ANIL 2025 (maille),0.0698,True,,True
-49178,Loiré,loire,Maison,1218.0,11,910.0,6.0,,7.05,ANIL 2025 (maille),0.0695,False,,True
-49257,Les Rairies,les rairies,Maison,1265.0,10,1479.0,14.0,,7.26,ANIL 2025 (maille),0.0689,False,,True
-49182,Louresse-Rochemenier,louresse rochemenier,Maison,1495.0,5,1807.0,12.0,,8.53,ANIL 2025 (maille),0.0685,False,,True
-49248,Ombrée d'Anjou,ombree d anjou,Maison,1220.0,100,1225.0,89.0,-0.0042,6.88,ANIL 2025,0.0676,True,,True
-49381,Yzernay,yzernay,Maison,1279.0,15,1368.0,13.0,,7.18,ANIL 2025 (maille),0.0674,True,,True
-49371,Vezins,vezins,Maison,1544.0,13,1745.0,20.0,-0.115,8.51,ANIL 2025 (maille),0.0661,False,,True
-49262,Rou-Marson,rou marson,Maison,1465.0,1,1458.0,4.0,,8.05,ANIL 2025 (maille),0.066,False,,True
-49017,Baracé,barace,Maison,1454.0,8,1796.0,8.0,,7.9,ANIL 2025 (maille),0.0652,False,,True
-49220,Morannes sur Sarthe-Daumeray,morannes sur sarthe daumeray,Maison,1401.0,38,1341.0,36.0,0.0443,7.5,ANIL 2025,0.0642,True,,True
-49009,Antoigné,antoigne,Maison,1230.0,8,1318.0,3.0,,6.56,ANIL 2025 (maille),0.064,False,,True
-49107,Cornillé-les-Caves,cornille les caves,Maison,1596.0,4,1928.0,8.0,,8.5,ANIL 2025 (maille),0.0639,False,,True
-49070,Chanteloup-les-Bois,chanteloup les bois,Maison,1374.0,7,1125.0,3.0,,7.18,ANIL 2025 (maille),0.0627,False,,True
-49018,Baugé-en-Anjou,bauge en anjou,Maison,1503.0,133,1399.0,104.0,0.0742,7.79,ANIL 2025,0.0622,True,,True
-49171,La Lande-Chasles,la lande chasles,Maison,1579.0,1,2011.0,1.0,,8.14,ANIL 2025 (maille),0.0619,False,,True
-49113,Courchamps,courchamps,Maison,1570.0,3,2011.0,4.0,,8.05,ANIL 2025 (maille),0.0615,False,,True
-49244,Mauges-sur-Loire,mauges sur loire,Maison,1833.0,149,1895.0,126.0,-0.0328,9.34,ANIL 2025,0.0612,True,,True
-49100,Cizay-la-Madeleine,cizay la madeleine,Maison,1439.0,2,1218.0,6.0,,7.32,ANIL 2025 (maille),0.0611,False,,True
-49121,Dénezé-sous-Doué,deneze sous doue,Maison,1562.0,7,1421.0,4.0,,7.9,ANIL 2025 (maille),0.0607,False,,True
-49002,Allonnes,allonnes,Maison,1746.0,18,1638.0,18.0,0.066,8.82,ANIL 2025,0.0606,True,,True
-49082,Chaudefonds-sur-Layon,chaudefonds sur layon,Maison,1828.0,12,2273.0,7.0,,9.23,ANIL 2025 (maille),0.0606,False,,True
-49345,Bellevigne-en-Layon,bellevigne en layon,Maison,1706.0,46,1837.0,61.0,-0.0714,8.6,ANIL 2025,0.0605,True,,True
-49114,Courléon,courleon,Maison,1660.0,4,1283.0,4.0,,8.34,ANIL 2025 (maille),0.0603,False,,True
-49180,Longué-Jumelles,longue jumelles,Maison,1571.0,59,1386.0,46.0,0.134,7.88,ANIL 2025,0.0602,True,,True
-49193,Le May-sur-Èvre,le may sur evre,Maison,1667.0,31,1703.0,36.0,-0.0212,8.31,ANIL 2025,0.0598,True,,True
-49292,Val-du-Layon,val du layon,Maison,1862.0,37,1977.0,36.0,-0.0584,9.23,ANIL 2025 (maille),0.0595,True,,True
-49235,Parnay,parnay,Maison,1653.0,7,1500.0,1.0,,8.18,ANIL 2025 (maille),0.0594,False,,True
-49378,Vivy,vivy,Maison,1765.0,19,1818.0,27.0,-0.0294,8.73,ANIL 2025,0.0594,True,,True
-49125,Doué-en-Anjou,doue en anjou,Maison,1688.0,93,1823.0,90.0,-0.0743,8.31,ANIL 2025,0.0591,True,,True
-49331,Segré-en-Anjou Bleu,segre en anjou bleu,Maison,1548.0,161,1610.0,145.0,-0.0388,7.62,ANIL 2025,0.0591,True,,True
-49188,Marcé,marce,Maison,1733.0,7,1591.0,5.0,,8.53,ANIL 2025 (maille),0.059,False,,True
-49272,Saint-Clément-des-Levées,saint clement des levees,Maison,1661.0,12,1797.0,14.0,,8.14,ANIL 2025 (maille),0.0588,False,,True
-49240,La Plaine,la plaine,Maison,1467.0,14,1605.0,6.0,,7.18,ANIL 2025 (maille),0.0587,False,,True
-49010,Armaillé,armaille,Maison,1382.0,4,563.0,1.0,,6.77,ANIL 2025 (maille),0.0587,False,,True
-49068,Champtocé-sur-Loire,champtoce sur loire,Maison,1631.0,17,1850.0,14.0,,7.98,ANIL 2025 (maille),0.0587,True,,True
-49069,Orée d'Anjou,oree d anjou,Maison,2048.0,60,2187.0,130.0,-0.0636,10.0,défaut config.yml,0.0586,True,,True
-49138,Les Bois d'Anjou,les bois d anjou,Maison,1776.0,25,1556.0,22.0,0.141,8.67,ANIL 2025,0.0586,True,,True
-49089,Chazé-sur-Argos,chaze sur argos,Maison,1687.0,13,1347.0,8.0,,8.19,ANIL 2025 (maille),0.0583,False,,True
-49060,Bellevigne-les-Châteaux,bellevigne les chateaux,Maison,1612.0,30,1562.0,35.0,0.032,7.83,ANIL 2025,0.0582,True,,True
-49355,Trémentines,trementines,Maison,1747.0,31,2070.0,26.0,-0.1561,8.35,ANIL 2025,0.0574,True,,True
-49036,Bouillé-Ménard,bouille menard,Maison,1423.0,3,975.0,10.0,,6.8,ANIL 2025 (maille),0.0573,False,,True
-49174,Huillé-Lézigné,huille lezigne,Maison,1522.0,12,1375.0,18.0,0.1064,7.26,ANIL 2025 (maille),0.0573,False,,True
-49359,Les Ulmes,les ulmes,Maison,1699.0,9,1468.0,2.0,,8.05,ANIL 2025 (maille),0.0569,False,,True
-49341,Souzay-Champigny,souzay champigny,Maison,1400.0,6,1517.0,8.0,,6.56,ANIL 2025 (maille),0.0562,False,,True
-49053,Brossay,brossay,Maison,1693.0,2,1044.0,3.0,,7.9,ANIL 2025 (maille),0.056,False,,True
-49058,Les Cerqueux,les cerqueux,Maison,1547.0,4,1296.0,6.0,,7.18,ANIL 2025 (maille),0.0557,False,,True
-49130,Écuillé,ecuille,Maison,1908.0,4,1949.0,5.0,,8.85,ANIL 2025 (maille),0.0556,False,,True
-49022,Beaulieu-sur-Layon,beaulieu sur layon,Maison,2012.0,11,2000.0,17.0,0.0059,9.33,ANIL 2025 (maille),0.0556,False,,True
-49311,Saint-Philbert-du-Peuple,saint philbert du peuple,Maison,1758.0,10,1378.0,1.0,,8.14,ANIL 2025 (maille),0.0556,False,,True
-49326,Sarrigné,sarrigne,Maison,2027.0,6,2633.0,4.0,,9.38,ANIL 2025 (maille),0.0556,False,,True
-49132,Étriché,etriche,Maison,1709.0,15,2000.0,17.0,-0.1457,7.9,ANIL 2025 (maille),0.0555,True,,True
-49333,Seiches-sur-le-Loir,seiches sur le loir,Maison,1935.0,28,1700.0,27.0,0.1385,8.91,ANIL 2025,0.0553,True,,True
-49362,Varrains,varrains,Maison,1750.0,19,1767.0,8.0,,8.05,ANIL 2025 (maille),0.0552,True,,True
-49170,Juvardeil,juvardeil,Maison,1720.0,7,1869.0,8.0,,7.9,ANIL 2025 (maille),0.0551,False,,True
-49194,Mazé-Milon,maze milon,Maison,2008.0,42,1987.0,42.0,0.0107,9.23,ANIL 2025,0.0551,True,,True
-49253,Le Puy-Notre-Dame,le puy notre dame,Maison,1350.0,15,1154.0,12.0,,6.18,ANIL 2025 (maille),0.055,True,,True
-49131,Épieds,epieds,Maison,1600.0,5,1357.0,6.0,,7.32,ANIL 2025 (maille),0.0549,False,,True
-49361,Varennes-sur-Loire,varennes sur loire,Maison,1795.0,12,1992.0,14.0,,8.18,ANIL 2025 (maille),0.0547,False,,True
-49328,Saumur,saumur,Maison,1913.0,211,2014.0,178.0,-0.0504,8.66,ANIL 2025,0.0543,True,,True
-49163,Jarzé Villages,jarze villages,Maison,1770.0,24,2052.0,19.0,-0.1374,8.0,ANIL 2025,0.0542,True,,True
-49127,Durtal,durtal,Maison,1640.0,22,1321.0,23.0,0.2415,7.39,ANIL 2025,0.0541,True,,True
-49021,Beaufort-en-Anjou,beaufort en anjou,Maison,2012.0,60,1888.0,60.0,0.0654,9.0,ANIL 2025,0.0537,True,,True
-49205,Miré,mire,Maison,1585.0,10,1314.0,11.0,,7.01,ANIL 2025 (maille),0.0531,False,,True
-49224,Neuillé,neuille,Maison,1885.0,7,1370.0,7.0,,8.34,ANIL 2025 (maille),0.0531,False,,True
-49161,La Jaille-Yvon,la jaille yvon,Maison,1549.0,4,1584.0,6.0,,6.84,ANIL 2025 (maille),0.053,False,,True
-49201,La Ménitré,la menitre,Maison,1933.0,19,1516.0,16.0,0.2755,8.53,ANIL 2025 (maille),0.0529,True,,True
-49054,Candé,cande,Maison,1633.0,20,1624.0,24.0,0.0057,7.19,ANIL 2025,0.0528,True,,True
-49011,Artannes-sur-Thouet,artannes sur thouet,Maison,1672.0,2,2020.0,3.0,,7.32,ANIL 2025 (maille),0.0526,False,,True
-49302,Saint-Macaire-du-Bois,saint macaire du bois,Maison,1413.0,6,1195.0,5.0,,6.18,ANIL 2025 (maille),0.0525,False,,True
-49367,Erdre-en-Anjou,erdre en anjou,Maison,1867.0,46,1824.0,46.0,0.0235,8.16,ANIL 2025,0.0525,True,,True
-49218,Montrevault-sur-Èvre,montrevault sur evre,Maison,1686.0,154,1571.0,167.0,0.0732,7.37,ANIL 2025,0.0524,True,,True
-49261,Gennes-Val-de-Loire,gennes val de loire,Maison,1890.0,80,1828.0,97.0,0.0341,8.23,ANIL 2025,0.0523,True,,True
-49215,Montreuil-Bellay,montreuil bellay,Maison,1558.0,36,1233.0,31.0,0.2631,6.77,ANIL 2025,0.0521,True,,True
-49222,Mozé-sur-Louet,moze sur louet,Maison,2206.0,16,2156.0,9.0,,9.56,ANIL 2025,0.052,True,,True
-49109,Coron,coron,Maison,1485.0,19,1494.0,6.0,,6.36,ANIL 2025,0.0514,True,,True
-49231,Nuaillé,nuaille,Maison,1987.0,13,2000.0,17.0,-0.0064,8.51,ANIL 2025 (maille),0.0514,False,,True
-49259,Rochefort-sur-Loire,rochefort sur loire,Maison,2195.0,18,2316.0,21.0,-0.0525,9.33,ANIL 2025 (maille),0.051,True,,True
-49099,Cholet,cholet,Maison,2088.0,455,2128.0,401.0,-0.0187,8.86,ANIL 2025,0.0509,True,,True
-49048,Briollay,briollay,Maison,2294.0,37,2373.0,27.0,-0.0332,9.74,ANIL 2025 (maille),0.0509,True,,True
-49080,Les Hauts-d'Anjou,les hauts d anjou,Maison,1818.0,83,1645.0,85.0,0.105,7.7,ANIL 2025,0.0508,True,,True
-49183,Val d'Erdre-Auxence,val d erdre auxence,Maison,1777.0,47,1735.0,37.0,0.0243,7.51,ANIL 2025,0.0507,True,,True
-49339,Soulaire-et-Bourg,soulaire et bourg,Maison,2096.0,13,2193.0,10.0,,8.85,ANIL 2025 (maille),0.0507,False,,True
-49353,Trélazé,trelaze,Maison,2523.0,169,2445.0,132.0,0.0322,10.61,ANIL 2025,0.0505,True,,True
-49076,La Chapelle-Saint-Laud,la chapelle saint laud,Maison,1889.0,8,1760.0,9.0,,7.9,ANIL 2025 (maille),0.0502,False,,True
-49298,Saint-Léger-de-Linières,saint leger de linieres,Maison,2593.0,39,2613.0,22.0,-0.008,10.84,ANIL 2025,0.0502,True,,True
-49217,Montreuil-sur-Maine,montreuil sur maine,Maison,1968.0,8,1210.0,3.0,,8.19,ANIL 2025 (maille),0.05,False,,True
-49192,Maulévrier,maulevrier,Maison,1875.0,24,1748.0,18.0,0.073,7.8,ANIL 2025,0.0499,True,,True
-49112,Le Coudray-Macouard,le coudray macouard,Maison,1760.0,8,1571.0,7.0,,7.32,ANIL 2025 (maille),0.0499,False,,True
-49129,Écouflant,ecouflant,Maison,2512.0,36,2500.0,41.0,0.0048,10.33,ANIL 2025,0.0493,True,,True
-49332,La Séguinière,la seguiniere,Maison,2044.0,26,2101.0,30.0,-0.0268,8.38,ANIL 2025,0.0492,True,,True
-49301,Sèvremoine,sevremoine,Maison,2007.0,254,1924.0,226.0,0.0435,8.23,ANIL 2025,0.0492,True,,True
-49023,Beaupréau-en-Mauges,beaupreau en mauges,Maison,1842.0,209,1851.0,190.0,-0.0048,7.55,ANIL 2025,0.0492,True,,True
-49284,Saint-Germain-des-Prés,saint germain des pres,Maison,1950.0,13,1737.0,16.0,0.1229,7.98,ANIL 2025 (maille),0.0491,False,,True
-49030,Blou,blou,Maison,2000.0,7,1623.0,11.0,,8.14,ANIL 2025 (maille),0.0488,False,,True
-49026,Bécon-les-Granits,becon les granits,Maison,2162.0,29,2216.0,24.0,-0.024,8.77,ANIL 2025,0.0487,True,,True
-49092,Chemillé-en-Anjou,chemille en anjou,Maison,1733.0,175,1664.0,150.0,0.0416,7.02,ANIL 2025,0.0486,True,,True
-49090,Cheffes,cheffes,Maison,1958.0,8,1567.0,17.0,0.2496,7.9,ANIL 2025 (maille),0.0485,False,,True
-49266,Saint-Augustin-des-Bois,saint augustin des bois,Maison,2311.0,12,2250.0,11.0,,9.32,ANIL 2025 (maille),0.0484,False,,True
-49344,Thorigné-d'Anjou,thorigne d anjou,Maison,2039.0,15,1994.0,5.0,,8.19,ANIL 2025 (maille),0.0482,True,,True
-49223,Mûrs-Erigné,murs erigne,Maison,2609.0,39,2600.0,44.0,0.0032,10.46,ANIL 2025,0.0481,True,,True
-49056,Carbay,carbay,Maison,1689.0,2,1000.0,1.0,,6.77,ANIL 2025 (maille),0.0481,False,,True
-49247,La Possonnière,la possonniere,Maison,2328.0,17,2254.0,19.0,0.0328,9.33,ANIL 2025 (maille),0.0481,True,,True
-49299,Saint-Léger-sous-Cholet,saint leger sous cholet,Maison,2098.0,25,2395.0,15.0,-0.1242,8.4,ANIL 2025 (maille),0.048,True,,True
-49110,Corzé,corze,Maison,2132.0,16,1752.0,12.0,,8.5,ANIL 2025 (maille),0.0479,True,,True
-49012,Aubigné-sur-Layon,aubigne sur layon,Maison,1633.0,1,800.0,3.0,,6.51,ANIL 2025 (maille),0.0479,False,,True
-49008,Angrie,angrie,Maison,1772.0,12,1531.0,8.0,,7.05,ANIL 2025 (maille),0.0478,False,,True
-49160,Ingrandes-Le Fresne sur Loire,ingrandes le fresne sur loire,Maison,1900.0,13,1787.0,18.0,0.063,7.54,ANIL 2025,0.0476,False,,True
-49176,Le Lion-d'Angers,le lion d angers,Maison,2280.0,46,2265.0,49.0,0.0067,9.04,ANIL 2025,0.0476,True,,True
-49050,Brissac Loire Aubance,brissac loire aubance,Maison,2292.0,86,2134.0,88.0,0.0736,9.08,ANIL 2025,0.0476,True,,True
-49167,Les Garennes sur Loire,les garennes sur loire,Maison,2650.0,45,2759.0,45.0,-0.0394,10.5,ANIL 2025,0.0475,True,,True
-49323,Verrières-en-Anjou,verrieres en anjou,Maison,2585.0,58,2483.0,67.0,0.041,10.17,ANIL 2025,0.0472,True,,True
-49003,Tuffalun,tuffalun,Maison,2012.0,13,2107.0,11.0,,7.9,ANIL 2025 (maille),0.0471,False,,True
-49347,Tiercé,tierce,Maison,2270.0,52,2207.0,48.0,0.0286,8.86,ANIL 2025,0.0469,True,,True
-49377,Rives-du-Loir-en-Anjou,rives du loir en anjou,Maison,2500.0,52,2187.0,48.0,0.1432,9.66,ANIL 2025,0.0464,True,,True
-49155,Grez-Neuville,grez neuville,Maison,2291.0,10,1943.0,5.0,,8.85,ANIL 2025 (maille),0.0463,False,,True
-49343,La Tessoualle,la tessoualle,Maison,2090.0,24,2226.0,19.0,-0.0613,8.03,ANIL 2025,0.0461,True,,True
-49329,Savennières,savennieres,Maison,2440.0,14,2515.0,19.0,-0.0298,9.38,ANIL 2025 (maille),0.0461,False,,True
-49307,Loire-Authion,loire authion,Maison,2434.0,156,2290.0,110.0,0.0626,9.35,ANIL 2025,0.0461,True,,True
-49216,Montreuil-sur-Loir,montreuil sur loir,Maison,2450.0,7,2156.0,1.0,,9.38,ANIL 2025 (maille),0.0459,False,,True
-49027,Bégrolles-en-Mauges,begrolles en mauges,Maison,2158.0,16,2003.0,16.0,0.0777,8.22,ANIL 2025,0.0457,True,,True
-49135,Feneu,feneu,Maison,2365.0,20,2301.0,16.0,0.028,9.0,ANIL 2025,0.0457,True,,True
-49246,Les Ponts-de-Cé,les ponts de ce,Maison,2901.0,82,2636.0,71.0,0.1002,11.03,ANIL 2025,0.0456,True,,True
-49283,Saint-Georges-sur-Loire,saint georges sur loire,Maison,2353.0,20,2293.0,20.0,0.0265,8.94,ANIL 2025,0.0456,True,,True
-49260,La Romagne,la romagne,Maison,2051.0,19,1990.0,19.0,0.0307,7.77,ANIL 2025,0.0455,True,,True
-49211,Montilliers,montilliers,Maison,1733.0,8,1308.0,9.0,,6.51,ANIL 2025 (maille),0.0451,False,,True
-49358,Turquant,turquant,Maison,1760.0,4,1059.0,5.0,,6.56,ANIL 2025 (maille),0.0447,False,,True
-49126,Orée d'Anjou,oree d anjou,Maison,2221.0,61,,,,8.27,ANIL 2025,0.0447,True,,True
-49338,Soulaines-sur-Aubance,soulaines sur aubance,Maison,2624.0,10,2651.0,7.0,,9.74,ANIL 2025 (maille),0.0445,False,,True
-49308,Saint-Melaine-sur-Aubance,saint melaine sur aubance,Maison,2658.0,13,2526.0,19.0,0.052,9.76,ANIL 2025 (maille),0.0441,False,,True
-49306,Saint-Martin-du-Fouilloux,saint martin du fouilloux,Maison,2559.0,8,1956.0,8.0,,9.38,ANIL 2025 (maille),0.044,False,,True
-49063,Chalonnes-sur-Loire,chalonnes sur loire,Maison,2368.0,49,2205.0,42.0,0.074,8.63,ANIL 2025,0.0437,True,,True
-49336,Somloire,somloire,Maison,1698.0,8,1623.0,12.0,,6.18,ANIL 2025 (maille),0.0437,False,,True
-49007,Angers,angers,Maison,3287.0,512,3184.0,513.0,0.0322,11.94,ANIL 2025,0.0436,True,,True
-49330,Sceaux-d'Anjou,sceaux d anjou,Maison,2257.0,8,2286.0,11.0,,8.19,ANIL 2025 (maille),0.0436,False,,True
-49120,Denée,denee,Maison,2703.0,9,2132.0,14.0,,9.74,ANIL 2025 (maille),0.0432,False,,True
-49294,Saint-Lambert-la-Potherie,saint lambert la potherie,Maison,2613.0,15,2495.0,34.0,0.047,9.38,ANIL 2025 (maille),0.0431,True,,True
-49200,Longuenée-en-Anjou,longuenee en anjou,Maison,2500.0,55,2627.0,41.0,-0.0482,8.97,ANIL 2025,0.0431,True,,True
-49214,Montreuil-Juigné,montreuil juigne,Maison,2757.0,61,2644.0,38.0,0.0429,9.88,ANIL 2025,0.043,True,,True
-49195,Mazières-en-Mauges,mazieres en mauges,Maison,2387.0,11,2473.0,7.0,,8.51,ANIL 2025 (maille),0.0428,False,,True
-49267,Saint-Barthélemy-d'Anjou,saint barthelemy d anjou,Maison,2875.0,69,2727.0,65.0,0.0542,10.24,ANIL 2025,0.0428,True,,True
-49269,Saint-Christophe-du-Bois,saint christophe du bois,Maison,2222.0,19,2056.0,20.0,0.081,7.84,ANIL 2025,0.0423,True,,True
-49271,Saint-Clément-de-la-Place,saint clement de la place,Maison,2515.0,19,2200.0,18.0,0.1434,8.81,ANIL 2025,0.042,True,,True
-49241,Le Plessis-Grammoire,le plessis grammoire,Maison,2754.0,34,2337.0,11.0,,9.38,ANIL 2025 (maille),0.0409,True,,True
-49035,Bouchemaine,bouchemaine,Maison,2981.0,48,2950.0,44.0,0.0103,10.03,ANIL 2025,0.0404,True,,True
-49370,Verrie,verrie,Maison,2402.0,3,1773.0,2.0,,8.05,ANIL 2025 (maille),0.0402,False,,True
-49020,Beaucouzé,beaucouze,Maison,3017.0,24,2797.0,30.0,0.0787,10.0,ANIL 2025,0.0398,True,,True
-49015,Avrillé,avrille,Maison,3037.0,120,2844.0,87.0,0.0679,9.82,ANIL 2025,0.0388,True,,True
-49029,Blaison-Saint-Sulpice,blaison saint sulpice,Maison,2644.0,9,2530.0,8.0,,8.5,ANIL 2025 (maille),0.0386,False,,True
-49123,Distré,distre,Maison,2278.0,19,2239.0,20.0,0.0173,7.32,ANIL 2025 (maille),0.0386,True,,True
-49352,Toutlemonde,toutlemonde,Maison,2275.0,16,2058.0,9.0,,7.18,ANIL 2025 (maille),0.0379,True,,True
-49067,Chenillé-Champteussé,chenille champteusse,Maison,2192.0,4,2018.0,1.0,,6.84,ANIL 2025 (maille),0.0375,False,,True
-49055,Cantenay-Épinard,cantenay epinard,Maison,2876.0,22,2743.0,19.0,0.0484,8.84,ANIL 2025,0.0369,True,,True
-49057,Cernusson,cernusson,Maison,2143.0,1,1323.0,2.0,,6.51,ANIL 2025 (maille),0.0365,False,,True
-49278,Sainte-Gemmes-sur-Loire,sainte gemmes sur loire,Maison,3189.0,26,3073.0,30.0,0.0377,9.38,ANIL 2025 (maille),0.0353,True,,True
-49219,Montsoreau,montsoreau,Maison,2303.0,8,2302.0,6.0,,6.56,ANIL 2025 (maille),0.0342,False,,True
+72035,Bessé-sur-Braye,besse sur braye,Appartement,493.0,2,333.0,1.0,,7.82,ANIL 2025,0.1905,False,,True
+72269,Saint-Calais,saint calais,Appartement,682.0,1,,,,7.99,ANIL 2025,0.1405,False,,True
+72071,Montval-sur-Loir,montval sur loir,Appartement,758.0,1,1000.0,1.0,,8.26,ANIL 2025,0.1307,False,,True
+72039,Bonnétable,bonnetable,Appartement,766.0,3,739.0,1.0,,7.5,ANIL 2025,0.1175,False,,True
+72268,Saint-Biez-en-Belin,saint biez en belin,Appartement,887.0,1,515.0,1.0,,8.67,ANIL 2025 (maille),0.1173,False,,True
+72132,La Ferté-Bernard,la ferte bernard,Appartement,1067.0,34,1227.0,22.0,-0.1307,8.53,ANIL 2025,0.096,True,,True
+72137,Villeneuve-en-Perseigne,villeneuve en perseigne,Appartement,1000.0,1,,,,7.55,ANIL 2025 (maille),0.0905,False,,True
+72124,Écommoy,ecommoy,Appartement,1151.0,2,,,,8.65,ANIL 2025,0.0902,False,,True
+72003,Allonnes,allonnes,Appartement,1400.0,37,1393.0,33.0,0.0051,9.71,ANIL 2025,0.0832,True,,True
+72068,La Chartre-sur-le-Loir,la chartre sur le loir,Appartement,1251.0,1,632.0,1.0,,8.53,ANIL 2025,0.0818,False,,True
+72154,La Flèche,la fleche,Appartement,1365.0,22,1463.0,7.0,,9.17,ANIL 2025,0.0806,True,,True
+72090,Connerré,connerre,Appartement,1443.0,2,,,,9.04,ANIL 2025,0.0752,False,,True
+72262,Loir en Vallée,loir en vallee,Appartement,1250.0,1,,,,7.75,ANIL 2025 (maille),0.0744,False,,True
+72264,Sablé-sur-Sarthe,sable sur sarthe,Appartement,1466.0,19,1189.0,23.0,0.2329,8.53,ANIL 2025,0.0698,True,,True
+72056,Champfleur,champfleur,Appartement,1333.0,1,,,,7.76,ANIL 2025 (maille),0.0698,False,,True
+72180,Mamers,mamers,Appartement,1423.0,4,1528.0,5.0,,8.21,ANIL 2025,0.0692,False,,True
+72181,Le Mans,le mans,Appartement,1932.0,1152,1897.0,1007.0,0.0186,10.59,ANIL 2025,0.0658,True,,True
+72095,Coulaines,coulaines,Appartement,1844.0,23,1301.0,18.0,0.4172,9.74,ANIL 2025,0.0634,True,,True
+72334,Sillé-le-Guillaume,sille le guillaume,Appartement,1530.0,2,,,,7.89,ANIL 2025,0.0618,False,,True
+72260,Ruaudin,ruaudin,Appartement,1881.0,3,2000.0,3.0,,9.2,ANIL 2025 (maille),0.0587,False,,True
+72103,Courdemanche,courdemanche,Appartement,1836.0,1,,,,8.59,ANIL 2025 (maille),0.0562,False,,True
+72065,La Chapelle-Saint-Aubin,la chapelle saint aubin,Appartement,1802.0,1,,,,8.41,ANIL 2025 (maille),0.056,False,,True
+72280,Saint-Georges-du-Bois,saint georges du bois,Appartement,2134.0,2,,,,9.25,ANIL 2025 (maille),0.052,False,,True
+72244,Précigné,precigne,Appartement,2054.0,2,1454.0,2.0,,8.58,ANIL 2025,0.0501,False,,True
+72330,Savigné-sous-le-Lude,savigne sous le lude,Appartement,1892.0,1,,,,7.56,ANIL 2025 (maille),0.0479,False,,True
+72311,Saint-Pierre-de-Chevillé,saint pierre de cheville,Maison,328.0,1,1046.0,5.0,,8.01,ANIL 2025 (maille),0.2928,False,,True
+72374,Villaines-la-Carelle,villaines la carelle,Maison,473.0,2,723.0,3.0,,7.26,ANIL 2025 (maille),0.1843,False,,True
+72078,Chérancé,cherance,Maison,500.0,4,1102.0,1.0,,6.76,ANIL 2025 (maille),0.1621,False,,True
+72171,Louzes,louzes,Maison,584.0,2,1425.0,1.0,,7.26,ANIL 2025 (maille),0.1492,False,,True
+72192,Les Mées,les mees,Maison,507.0,2,1036.0,1.0,,6.13,ANIL 2025 (maille),0.1449,False,,True
+72041,Bouër,bouer,Maison,713.0,5,1206.0,2.0,,8.54,ANIL 2025 (maille),0.1438,False,,True
+72235,Piacé,piace,Maison,570.0,3,,,,6.76,ANIL 2025 (maille),0.1423,False,,True
+72273,Saint-Christophe-du-Jambet,saint christophe du jambet,Maison,578.0,4,1783.0,2.0,,6.76,ANIL 2025 (maille),0.1403,False,,True
+72367,Vallon-sur-Gée,vallon sur gee,Maison,682.0,5,915.0,8.0,,7.21,ANIL 2025 (maille),0.1269,False,,True
+72049,La Bruère-sur-Loir,la bruere sur loir,Maison,622.0,1,1231.0,1.0,,6.55,ANIL 2025 (maille),0.1264,False,,True
+72270,Saint-Calez-en-Saosnois,saint calez en saosnois,Maison,703.0,2,861.0,2.0,,7.26,ANIL 2025 (maille),0.1239,False,,True
+72178,Maisoncelles,maisoncelles,Maison,643.0,1,696.0,2.0,,6.37,ANIL 2025 (maille),0.1189,False,,True
+72250,Rahay,rahay,Maison,620.0,4,742.0,2.0,,5.97,ANIL 2025 (maille),0.1157,False,,True
+72267,Saint-Aubin-des-Coudrais,saint aubin des coudrais,Maison,672.0,8,1426.0,16.0,-0.5289,6.25,ANIL 2025 (maille),0.1116,False,,True
+72356,Thoiré-sur-Dinan,thoire sur dinan,Maison,714.0,3,753.0,2.0,,6.37,ANIL 2025 (maille),0.107,False,,True
+72259,Rouperroux-le-Coquet,rouperroux le coquet,Maison,748.0,1,1050.0,2.0,,6.61,ANIL 2025 (maille),0.106,False,,True
+72324,Saint-Vincent-des-Prés,saint vincent des pres,Maison,707.0,6,1250.0,3.0,,6.19,ANIL 2025 (maille),0.1051,False,,True
+72274,Saint-Christophe-en-Champagne,saint christophe en champagne,Maison,738.0,1,,,,6.39,ANIL 2025 (maille),0.1038,False,,True
+72309,Saint-Paul-le-Gaultier,saint paul le gaultier,Maison,797.0,3,864.0,6.0,,6.77,ANIL 2025 (maille),0.1019,False,,True
+72215,Neufchâtel-en-Saosnois,neufchatel en saosnois,Maison,856.0,14,1171.0,11.0,,7.26,ANIL 2025 (maille),0.1018,False,,True
+72164,Livet-en-Saosnois,livet en saosnois,Maison,808.0,1,984.0,2.0,,6.76,ANIL 2025 (maille),0.1003,False,,True
+72227,Panon,panon,Maison,870.0,1,,,,7.26,ANIL 2025 (maille),0.1001,False,,True
+72376,Villaines-sous-Lucé,villaines sous luce,Maison,841.0,8,1182.0,4.0,,7.02,ANIL 2025 (maille),0.1001,False,,True
+72361,Tresson,tresson,Maison,772.0,8,1067.0,7.0,,6.37,ANIL 2025 (maille),0.099,False,,True
+72375,Villaines-la-Gonais,villaines la gonais,Maison,1062.0,7,1431.0,6.0,,8.54,ANIL 2025 (maille),0.0965,False,,True
+72279,Saint-Georges-de-la-Couée,saint georges de la couee,Maison,792.0,7,1264.0,2.0,,6.37,ANIL 2025 (maille),0.0964,False,,True
+72210,Montreuil-le-Henri,montreuil le henri,Maison,803.0,3,757.0,4.0,,6.37,ANIL 2025 (maille),0.0952,False,,True
+72316,Saint-Rémy-des-Monts,saint remy des monts,Maison,785.0,11,1158.0,5.0,,6.19,ANIL 2025 (maille),0.0947,False,,True
+72094,Coudrecieux,coudrecieux,Maison,809.0,9,681.0,8.0,,6.37,ANIL 2025 (maille),0.0945,False,,True
+72368,Vancé,vance,Maison,757.0,4,654.0,5.0,,5.92,ANIL 2025 (maille),0.0939,False,,True
+72093,Cormes,cormes,Maison,1092.0,9,1562.0,7.0,,8.54,ANIL 2025 (maille),0.0939,False,,True
+72323,Saint-Victeur,saint victeur,Maison,875.0,9,1049.0,5.0,,6.77,ANIL 2025 (maille),0.0929,False,,True
+72224,Nuillé-le-Jalais,nuille le jalais,Maison,959.0,5,1375.0,8.0,,7.41,ANIL 2025 (maille),0.0926,False,,True
+72317,Saint-Rémy-du-Val,saint remy du val,Maison,944.0,4,771.0,7.0,,7.26,ANIL 2025 (maille),0.0923,False,,True
+72085,Cogners,cogners,Maison,773.0,5,801.0,4.0,,5.92,ANIL 2025 (maille),0.0919,False,,True
+72185,Mareil-sur-Loir,mareil sur loir,Maison,917.0,4,1398.0,5.0,,6.95,ANIL 2025 (maille),0.0909,False,,True
+72296,Saint-Maixent,saint maixent,Maison,1129.0,7,1000.0,13.0,,8.54,ANIL 2025 (maille),0.0908,False,,True
+72307,Saint-Ouen-en-Champagne,saint ouen en champagne,Maison,846.0,2,,,,6.39,ANIL 2025 (maille),0.0906,False,,True
+72208,Montmirail,montmirail,Maison,839.0,4,1200.0,2.0,,6.33,ANIL 2025 (maille),0.0905,False,,True
+72372,Vezot,vezot,Maison,973.0,1,643.0,1.0,,7.26,ANIL 2025 (maille),0.0895,False,,True
+72184,Mareil-en-Champagne,mareil en champagne,Maison,969.0,7,1667.0,1.0,,7.21,ANIL 2025 (maille),0.0893,False,,True
+72314,Saint-Pierre-du-Lorouër,saint pierre du lorouer,Maison,859.0,5,500.0,7.0,,6.37,ANIL 2025 (maille),0.089,False,,True
+72194,Meurcé,meurce,Maison,981.0,2,1538.0,3.0,,7.15,ANIL 2025 (maille),0.0875,False,,True
+72354,Thoigné,thoigne,Maison,844.0,3,1436.0,2.0,,6.13,ANIL 2025 (maille),0.0871,False,,True
+72077,Chenu,chenu,Maison,906.0,2,754.0,6.0,,6.55,ANIL 2025 (maille),0.0867,False,,True
+72043,Bourg-le-Roi,bourg le roi,Maison,920.0,8,1104.0,2.0,,6.62,ANIL 2025 (maille),0.0864,False,,True
+72148,Jauzé,jauze,Maison,860.0,1,2000.0,1.0,,6.13,ANIL 2025 (maille),0.0855,False,,True
+72091,Contilly,contilly,Maison,1022.0,1,1048.0,4.0,,7.26,ANIL 2025 (maille),0.0852,False,,True
+72109,Crissé,crisse,Maison,867.0,5,951.0,4.0,,6.08,ANIL 2025 (maille),0.0842,False,,True
+72255,Rouessé-Vassé,rouesse vasse,Maison,852.0,15,913.0,9.0,,5.96,ANIL 2025 (maille),0.084,True,,True
+72366,Valennes,valennes,Maison,857.0,2,1056.0,8.0,,5.97,ANIL 2025 (maille),0.0836,False,,True
+72104,Courgains,courgains,Maison,892.0,6,985.0,4.0,,6.19,ANIL 2025 (maille),0.0833,False,,True
+72009,Arthezé,artheze,Maison,999.0,4,970.0,2.0,,6.92,ANIL 2025 (maille),0.0831,False,,True
+72358,Thorigné-sur-Dué,thorigne sur due,Maison,1250.0,15,1283.0,9.0,,8.61,ANIL 2025,0.0827,True,,True
+72209,Montreuil-le-Chétif,montreuil le chetif,Maison,893.0,4,991.0,5.0,,6.08,ANIL 2025 (maille),0.0817,False,,True
+72052,Chahaignes,chahaignes,Maison,983.0,10,1162.0,10.0,,6.68,ANIL 2025 (maille),0.0816,False,,True
+72248,Pruillé-l'Éguillé,pruille l eguille,Maison,1041.0,19,1438.0,8.0,,7.02,ANIL 2025 (maille),0.0809,True,,True
+72005,Ancinnes,ancinnes,Maison,1079.0,14,1124.0,11.0,,7.26,ANIL 2025 (maille),0.0807,False,,True
+72353,Théligny,theligny,Maison,952.0,4,1047.0,1.0,,6.33,ANIL 2025 (maille),0.0798,False,,True
+72221,Nogent-sur-Loir,nogent sur loir,Maison,988.0,6,1369.0,4.0,,6.55,ANIL 2025 (maille),0.0795,False,,True
+72357,Thorée-les-Pins,thoree les pins,Maison,1105.0,10,1686.0,5.0,,7.26,ANIL 2025 (maille),0.0788,False,,True
+72100,Courcelles-la-Forêt,courcelles la foret,Maison,1063.0,4,995.0,4.0,,6.92,ANIL 2025 (maille),0.0781,False,,True
+72144,Gréez-sur-Roc,greez sur roc,Maison,1011.0,9,1109.0,8.0,,6.56,ANIL 2025 (maille),0.0778,False,,True
+72173,Luceau,luceau,Maison,945.0,8,1357.0,7.0,,6.07,ANIL 2025 (maille),0.077,False,,True
+72283,Saint-Germain-d'Arcé,saint germain d arce,Maison,1087.0,5,1085.0,3.0,,6.95,ANIL 2025 (maille),0.0767,False,,True
+72017,Auvers-sous-Montfaucon,auvers sous montfaucon,Maison,1130.0,1,1869.0,3.0,,7.21,ANIL 2025 (maille),0.0765,False,,True
+72050,Brûlon,brulon,Maison,1000.0,13,1215.0,13.0,,6.35,ANIL 2025,0.0762,False,,True
+72382,Volnay,volnay,Maison,1107.0,19,1333.0,15.0,-0.1696,7.02,ANIL 2025 (maille),0.076,True,,True
+72153,Jupilles,jupilles,Maison,1110.0,8,1778.0,3.0,,7.02,ANIL 2025 (maille),0.0758,False,,True
+72046,Le Breil-sur-Mérize,le breil sur merize,Maison,1390.0,19,1478.0,19.0,-0.0599,8.77,ANIL 2025,0.0757,True,,True
+72057,Champrond,champrond,Maison,1012.0,2,,,,6.33,ANIL 2025 (maille),0.0751,False,,True
+72044,Bousse,bousse,Maison,1111.0,5,1296.0,3.0,,6.94,ANIL 2025 (maille),0.0749,False,,True
+72121,Douillet,douillet,Maison,976.0,13,789.0,5.0,,6.08,ANIL 2025 (maille),0.0748,False,,True
+72364,Vaas,vaas,Maison,1067.0,27,1231.0,24.0,-0.1329,6.64,ANIL 2025,0.0746,True,,True
+72176,Le Lude,le lude,Maison,1148.0,48,1150.0,45.0,-0.0016,7.14,ANIL 2025,0.0746,True,,True
+72334,Sillé-le-Guillaume,sille le guillaume,Maison,1039.0,40,1181.0,22.0,-0.1205,6.43,ANIL 2025,0.0743,True,,True
+72138,Fresnay-sur-Sarthe,fresnay sur sarthe,Maison,1036.0,48,1042.0,37.0,-0.0057,6.41,ANIL 2025,0.0742,True,,True
+72211,Mont-Saint-Jean,mont saint jean,Maison,876.0,10,928.0,12.0,,5.4,ANIL 2025 (maille),0.074,False,,True
+72322,Saint-Ulphace,saint ulphace,Maison,987.0,5,1283.0,7.0,,6.01,ANIL 2025 (maille),0.0731,False,,True
+72345,Surfonds,surfonds,Maison,1153.0,6,1395.0,2.0,,7.02,ANIL 2025 (maille),0.073,False,,True
+72012,Assé-le-Riboul,asse le riboul,Maison,1116.0,5,722.0,9.0,,6.76,ANIL 2025 (maille),0.0727,False,,True
+72087,Conflans-sur-Anille,conflans sur anille,Maison,994.0,4,598.0,4.0,,5.97,ANIL 2025 (maille),0.0721,False,,True
+72139,Fyé,fye,Maison,1103.0,16,1208.0,7.0,,6.62,ANIL 2025 (maille),0.072,True,,True
+72068,La Chartre-sur-le-Loir,la chartre sur le loir,Maison,1064.0,21,1001.0,16.0,0.0633,6.37,ANIL 2025 (maille),0.0718,True,,True
+72349,Teillé,teille,Maison,1196.0,3,760.0,5.0,,7.15,ANIL 2025 (maille),0.0718,False,,True
+72120,Doucelles,doucelles,Maison,1031.0,4,1816.0,2.0,,6.13,ANIL 2025 (maille),0.0713,False,,True
+72170,Louvigny,louvigny,Maison,1144.0,2,1179.0,5.0,,6.76,ANIL 2025 (maille),0.0709,False,,True
+72373,Vibraye,vibraye,Maison,1088.0,28,1262.0,34.0,-0.1379,6.39,ANIL 2025,0.0705,True,,True
+72137,Villeneuve-en-Perseigne,villeneuve en perseigne,Maison,1240.0,14,1498.0,18.0,-0.1724,7.26,ANIL 2025 (maille),0.0703,False,,True
+72035,Bessé-sur-Braye,besse sur braye,Maison,1034.0,29,1147.0,34.0,-0.0979,6.04,ANIL 2025,0.07,True,,True
+72251,René,rene,Maison,1052.0,3,740.0,7.0,,6.13,ANIL 2025 (maille),0.0699,False,,True
+72143,Le Grand-Lucé,le grand luce,Maison,1148.0,23,1201.0,22.0,-0.0439,6.67,ANIL 2025,0.0697,True,,True
+72348,Tassillé,tassille,Maison,1223.0,4,568.0,1.0,,7.1,ANIL 2025 (maille),0.0697,False,,True
+72269,Saint-Calais,saint calais,Maison,1051.0,34,833.0,41.0,0.261,6.04,ANIL 2025,0.0689,True,,True
+72122,Duneau,duneau,Maison,1495.0,16,1664.0,12.0,,8.54,ANIL 2025 (maille),0.0686,True,,True
+72230,Parigné-le-Pôlin,parigne le polin,Maison,1607.0,10,1500.0,9.0,,9.14,ANIL 2025 (maille),0.0683,False,,True
+72147,La Guierche,la guierche,Maison,1692.0,13,1763.0,18.0,-0.0401,9.6,ANIL 2025 (maille),0.0681,False,,True
+72293,Saint-Jean-du-Bois,saint jean du bois,Maison,1224.0,6,1222.0,4.0,,6.92,ANIL 2025 (maille),0.0678,False,,True
+72011,Assé-le-Boisne,asse le boisne,Maison,1078.0,9,667.0,3.0,,6.08,ANIL 2025 (maille),0.0677,False,,True
+72330,Savigné-sous-le-Lude,savigne sous le lude,Maison,1235.0,8,911.0,7.0,,6.95,ANIL 2025 (maille),0.0675,False,,True
+72193,Melleray,melleray,Maison,1126.0,6,734.0,8.0,,6.33,ANIL 2025 (maille),0.0675,False,,True
+72128,Val d'Étangson,val d etangson,Maison,1136.0,9,740.0,6.0,,6.37,ANIL 2025 (maille),0.0673,False,,True
+72313,Saint-Pierre-des-Ormes,saint pierre des ormes,Maison,1111.0,7,1141.0,3.0,,6.19,ANIL 2025 (maille),0.0669,False,,True
+72268,Saint-Biez-en-Belin,saint biez en belin,Maison,1435.0,2,2168.0,2.0,,7.96,ANIL 2025 (maille),0.0665,False,,True
+72333,Semur-en-Vallon,semur en vallon,Maison,1071.0,4,,,,5.92,ANIL 2025 (maille),0.0663,False,,True
+72253,Roézé-sur-Sarthe,roeze sur sarthe,Maison,1655.0,23,1607.0,18.0,0.0302,9.14,ANIL 2025 (maille),0.0663,True,,True
+72111,Cures,cures,Maison,1389.0,4,1074.0,6.0,,7.66,ANIL 2025 (maille),0.0662,False,,True
+72060,La Chapelle-aux-Choux,la chapelle aux choux,Maison,1263.0,3,579.0,2.0,,6.95,ANIL 2025 (maille),0.066,False,,True
+72103,Courdemanche,courdemanche,Maison,1079.0,12,1111.0,6.0,,5.92,ANIL 2025 (maille),0.0659,False,,True
+72369,Verneil-le-Chétif,verneil le chetif,Maison,1106.0,10,1232.0,5.0,,6.07,ANIL 2025 (maille),0.0659,False,,True
+72291,Saint-Jean-de-la-Motte,saint jean de la motte,Maison,1268.0,13,1277.0,8.0,,6.94,ANIL 2025 (maille),0.0657,False,,True
+72237,Pirmil,pirmil,Maison,1300.0,6,1234.0,4.0,,7.1,ANIL 2025 (maille),0.0656,False,,True
+72151,Juigné-sur-Sarthe,juigne sur sarthe,Maison,1172.0,10,1415.0,13.0,,6.39,ANIL 2025 (maille),0.0654,False,,True
+72325,Saint-Vincent-du-Lorouër,saint vincent du lorouer,Maison,1170.0,8,1121.0,3.0,,6.37,ANIL 2025 (maille),0.0653,False,,True
+72135,La Fontaine-Saint-Martin,la fontaine saint martin,Maison,1274.0,6,938.0,6.0,,6.94,ANIL 2025 (maille),0.0653,False,,True
+72180,Mamers,mamers,Maison,1045.0,71,971.0,52.0,0.076,5.68,ANIL 2025,0.0653,True,,True
+72265,Saint-Aignan,saint aignan,Maison,1139.0,6,2301.0,2.0,,6.19,ANIL 2025 (maille),0.0653,False,,True
+72243,Pontvallain,pontvallain,Maison,1279.0,19,1257.0,10.0,,6.94,ANIL 2025 (maille),0.0651,True,,True
+72098,Coulongé,coulonge,Maison,1280.0,6,919.0,4.0,,6.94,ANIL 2025 (maille),0.065,False,,True
+72149,Joué-en-Charnie,joue en charnie,Maison,1335.0,3,881.0,6.0,,7.21,ANIL 2025 (maille),0.0648,False,,True
+72032,Berfay,berfay,Maison,1107.0,3,1138.0,7.0,,5.97,ANIL 2025 (maille),0.0648,False,,True
+72295,Saint-Longis,saint longis,Maison,1346.0,5,895.0,8.0,,7.26,ANIL 2025 (maille),0.0647,False,,True
+72190,Marolles-lès-Saint-Calais,marolles les saint calais,Maison,1108.0,7,1562.0,1.0,,5.97,ANIL 2025 (maille),0.0647,False,,True
+72007,Ardenay-sur-Mérize,ardenay sur merize,Maison,1587.0,9,1746.0,3.0,,8.54,ANIL 2025 (maille),0.0646,False,,True
+72189,Marolles-les-Braults,marolles les braults,Maison,1204.0,18,1005.0,26.0,0.1979,6.44,ANIL 2025,0.0642,True,,True
+72071,Montval-sur-Loir,montval sur loir,Maison,1229.0,58,1280.0,73.0,-0.0393,6.57,ANIL 2025,0.0642,True,,True
+72266,Saint-Aubin-de-Locquenay,saint aubin de locquenay,Maison,1267.0,10,1100.0,9.0,,6.77,ANIL 2025 (maille),0.0641,False,,True
+72225,Oisseau-le-Petit,oisseau le petit,Maison,1267.0,7,1049.0,8.0,,6.77,ANIL 2025 (maille),0.0641,False,,True
+72294,Saint-Léonard-des-Bois,saint leonard des bois,Maison,1270.0,8,800.0,7.0,,6.77,ANIL 2025 (maille),0.064,False,,True
+72074,Chemiré-en-Charnie,chemire en charnie,Maison,1143.0,3,698.0,1.0,,6.08,ANIL 2025 (maille),0.0639,False,,True
+72150,Joué-l'Abbé,joue l abbe,Maison,1804.0,14,1683.0,15.0,0.0721,9.6,ANIL 2025 (maille),0.0639,False,,True
+72290,Saint-Jean-d'Assé,saint jean d asse,Maison,1401.0,21,1744.0,16.0,-0.1966,7.45,ANIL 2025,0.0638,True,,True
+72305,Saint-Ouen-de-Mimbré,saint ouen de mimbre,Maison,1275.0,11,1201.0,12.0,,6.77,ANIL 2025 (maille),0.0637,False,,True
+72233,Peray,peray,Maison,1250.0,1,1053.0,1.0,,6.61,ANIL 2025 (maille),0.0634,False,,True
+72232,Notre-Dame-du-Pé,notre dame du pe,Maison,1500.0,5,1688.0,6.0,,7.9,ANIL 2025 (maille),0.0632,False,,True
+72110,Crosmières,crosmieres,Maison,1319.0,7,1602.0,10.0,,6.94,ANIL 2025 (maille),0.0631,False,,True
+72302,Saint-Martin-des-Monts,saint martin des monts,Maison,1625.0,3,1182.0,1.0,,8.54,ANIL 2025 (maille),0.0631,False,,True
+72058,Changé,change,Maison,2004.0,50,2190.0,43.0,-0.0849,10.53,ANIL 2025,0.0631,True,,True
+72126,Épineu-le-Chevreuil,epineu le chevreuil,Maison,1220.0,5,1019.0,5.0,,6.4,ANIL 2025 (maille),0.063,False,,True
+72022,Le Bailleul,le bailleul,Maison,1324.0,17,1451.0,6.0,,6.92,ANIL 2025 (maille),0.0627,True,,True
+72303,Saint-Michel-de-Chavaignes,saint michel de chavaignes,Maison,1219.0,6,966.0,6.0,,6.37,ANIL 2025 (maille),0.0627,False,,True
+72142,Grandchamp,grandchamp,Maison,1294.0,1,864.0,4.0,,6.76,ANIL 2025 (maille),0.0626,False,,True
+72264,Sablé-sur-Sarthe,sable sur sarthe,Maison,1409.0,85,1393.0,76.0,0.0114,7.35,ANIL 2025,0.0626,True,,True
+72089,Conlie,conlie,Maison,1289.0,26,1390.0,16.0,-0.073,6.71,ANIL 2025,0.0625,True,,True
+72337,Sougé-le-Ganelon,souge le ganelon,Maison,1040.0,12,913.0,12.0,,5.4,ANIL 2025 (maille),0.0623,False,,True
+72282,Saint-Georges-le-Gaultier,saint georges le gaultier,Maison,1041.0,9,1370.0,5.0,,5.4,ANIL 2025 (maille),0.0623,False,,True
+72275,Saint-Corneille,saint corneille,Maison,1854.0,10,1865.0,11.0,,9.6,ANIL 2025 (maille),0.0621,False,,True
+72222,Nouans,nouans,Maison,1183.0,6,,,,6.13,ANIL 2025 (maille),0.0621,False,,True
+72027,Beaumont-sur-Dême,beaumont sur deme,Maison,1172.0,6,847.0,4.0,,6.07,ANIL 2025 (maille),0.0621,False,,True
+72340,Souligné-sous-Ballon,souligne sous ballon,Maison,1382.0,11,1770.0,14.0,,7.15,ANIL 2025 (maille),0.0621,False,,True
+72016,Auvers-le-Hamon,auvers le hamon,Maison,1235.0,13,1228.0,17.0,0.0053,6.39,ANIL 2025 (maille),0.0621,False,,True
+72351,Tennie,tennie,Maison,1309.0,8,1069.0,9.0,,6.77,ANIL 2025 (maille),0.0621,False,,True
+72332,Ségrie,segrie,Maison,1309.0,8,1238.0,5.0,,6.77,ANIL 2025 (maille),0.0621,False,,True
+72013,Aubigné-Racan,aubigne racan,Maison,1296.0,32,1256.0,25.0,0.0316,6.7,ANIL 2025,0.0621,True,,True
+72381,Voivres-lès-le-Mans,voivres les le mans,Maison,1609.0,12,1840.0,7.0,,8.32,ANIL 2025 (maille),0.062,False,,True
+72228,Parcé-sur-Sarthe,parce sur sarthe,Maison,1333.0,19,1229.0,17.0,0.0851,6.89,ANIL 2025,0.062,True,,True
+72029,Beaumont-sur-Sarthe,beaumont sur sarthe,Maison,1362.0,22,1199.0,28.0,0.1358,7.0,ANIL 2025,0.0616,True,,True
+72169,Louplande,louplande,Maison,1780.0,11,1622.0,14.0,,9.14,ANIL 2025 (maille),0.0616,False,,True
+72187,Marigné-Laillé,marigne laille,Maison,1302.0,22,1095.0,12.0,,6.68,ANIL 2025 (maille),0.0616,True,,True
+72020,Avezé,aveze,Maison,1217.0,5,1207.0,7.0,,6.25,ANIL 2025 (maille),0.0616,False,,True
+72179,Malicorne-sur-Sarthe,malicorne sur sarthe,Maison,1370.0,25,1131.0,22.0,0.2115,7.0,ANIL 2025,0.0613,True,,True
+72107,Crannes-en-Champagne,crannes en champagne,Maison,1391.0,4,2051.0,4.0,,7.1,ANIL 2025 (maille),0.0613,False,,True
+72306,Saint-Ouen-en-Belin,saint ouen en belin,Maison,1558.0,11,1356.0,8.0,,7.96,ANIL 2025 (maille),0.0613,False,,True
+72064,La Chapelle-Huon,la chapelle huon,Maison,1171.0,6,1412.0,3.0,,5.92,ANIL 2025 (maille),0.0607,False,,True
+72003,Allonnes,allonnes,Maison,1644.0,59,1630.0,56.0,0.0085,8.3,ANIL 2025,0.0606,True,,True
+72370,Vernie,vernie,Maison,1351.0,3,892.0,2.0,,6.77,ANIL 2025 (maille),0.0601,False,,True
+72278,Saint-Denis-d'Orques,saint denis d orques,Maison,1190.0,12,1204.0,12.0,,5.96,ANIL 2025 (maille),0.0601,False,,True
+72146,Guécélard,guecelard,Maison,1825.0,24,1879.0,18.0,-0.0286,9.14,ANIL 2025 (maille),0.0601,True,,True
+72200,Moncé-en-Belin,monce en belin,Maison,1916.0,40,1945.0,32.0,-0.0149,9.55,ANIL 2025,0.0598,True,,True
+72112,Dangeul,dangeul,Maison,1245.0,2,1110.0,4.0,,6.19,ANIL 2025 (maille),0.0597,False,,True
+72202,Monhoudou,monhoudou,Maison,1245.0,1,909.0,3.0,,6.19,ANIL 2025 (maille),0.0597,False,,True
+72132,La Ferté-Bernard,la ferte bernard,Maison,1481.0,75,1685.0,66.0,-0.121,7.37,ANIL 2025,0.0597,True,,True
+72025,Bazouges Cré sur Loir,bazouges cre sur loir,Maison,1461.0,21,1488.0,16.0,-0.0179,7.26,ANIL 2025 (maille),0.0596,True,,True
+72385,Yvré-le-Pôlin,yvre le polin,Maison,1601.0,17,1438.0,11.0,,7.96,ANIL 2025 (maille),0.0596,True,,True
+72023,Ballon-Saint Mars,ballon saint mars,Maison,1335.0,30,1351.0,18.0,-0.0118,6.62,ANIL 2025,0.0595,True,,True
+72338,Souillé,souille,Maison,1937.0,6,1852.0,8.0,,9.6,ANIL 2025 (maille),0.0595,False,,True
+72241,Montfort-le-Gesnois,montfort le gesnois,Maison,1531.0,36,1552.0,31.0,-0.0133,7.59,ANIL 2025,0.0595,True,,True
+72019,Avessé,avesse,Maison,1289.0,2,1396.0,3.0,,6.39,ANIL 2025 (maille),0.0595,False,,True
+72141,Gesnes-le-Gandelin,gesnes le gandelin,Maison,1368.0,13,1629.0,9.0,,6.77,ANIL 2025 (maille),0.0594,False,,True
+72036,Béthon,bethon,Maison,1370.0,4,,,,6.77,ANIL 2025 (maille),0.0593,False,,True
+72252,Requeil,requeil,Maison,1403.0,11,1048.0,12.0,,6.94,ANIL 2025 (maille),0.0593,False,,True
+72172,Le Luart,le luart,Maison,1733.0,11,1622.0,12.0,,8.54,ANIL 2025 (maille),0.0592,False,,True
+72161,Lhomme,lhomme,Maison,1293.0,11,1277.0,10.0,,6.37,ANIL 2025 (maille),0.0591,False,,True
+72191,Mayet,mayet,Maison,1411.0,38,1309.0,33.0,0.0778,6.94,ANIL 2025,0.0591,True,,True
+72383,Vouvray-sur-Huisne,vouvray sur huisne,Maison,1333.0,1,,,,6.56,ANIL 2025 (maille),0.0591,False,,True
+72195,Mézeray,mezeray,Maison,1408.0,18,1010.0,9.0,,6.92,ANIL 2025 (maille),0.059,True,,True
+72039,Bonnétable,bonnetable,Maison,1333.0,43,1163.0,49.0,0.1467,6.53,ANIL 2025,0.0588,True,,True
+72216,Neuvillalais,neuvillalais,Maison,1383.0,8,1418.0,10.0,,6.77,ANIL 2025 (maille),0.0588,False,,True
+72236,Pincé,pince,Maison,1410.0,2,1649.0,3.0,,6.9,ANIL 2025 (maille),0.0587,False,,True
+72090,Connerré,connerre,Maison,1437.0,44,1437.0,41.0,0.0003,7.03,ANIL 2025,0.0587,True,,True
+72051,Cérans-Foulletourte,cerans foulletourte,Maison,1540.0,40,1608.0,28.0,-0.0425,7.53,ANIL 2025,0.0587,True,,True
+72008,Arnage,arnage,Maison,1820.0,51,1879.0,61.0,-0.0311,8.89,ANIL 2025,0.0586,True,,True
+72124,Écommoy,ecommoy,Maison,1562.0,43,1525.0,30.0,0.0248,7.61,ANIL 2025,0.0584,True,,True
+72101,Courcemont,courcemont,Maison,1259.0,11,1724.0,9.0,,6.13,ANIL 2025 (maille),0.0584,False,,True
+72239,Poillé-sur-Vègre,poille sur vegre,Maison,1313.0,6,1020.0,9.0,,6.39,ANIL 2025 (maille),0.0584,False,,True
+72182,Mansigné,mansigne,Maison,1429.0,12,1413.0,16.0,0.0115,6.95,ANIL 2025 (maille),0.0583,False,,True
+72134,Flée,flee,Maison,1375.0,5,1253.0,4.0,,6.68,ANIL 2025 (maille),0.0583,False,,True
+72105,Courgenard,courgenard,Maison,1305.0,4,1100.0,5.0,,6.33,ANIL 2025 (maille),0.0582,False,,True
+72343,Souvigné-sur-Sarthe,souvigne sur sarthe,Maison,1316.0,5,379.0,2.0,,6.38,ANIL 2025 (maille),0.0582,False,,True
+72038,Boëssé-le-Sec,boesse le sec,Maison,1354.0,9,1052.0,10.0,,6.56,ANIL 2025 (maille),0.0582,False,,True
+72280,Saint-Georges-du-Bois,saint georges du bois,Maison,1886.0,16,2202.0,14.0,,9.14,ANIL 2025 (maille),0.0582,True,,True
+72136,Fontenay-sur-Vègre,fontenay sur vegre,Maison,1468.0,3,1000.0,1.0,,7.1,ANIL 2025 (maille),0.0581,False,,True
+72286,Saint-Gervais-de-Vic,saint gervais de vic,Maison,1226.0,1,1091.0,5.0,,5.92,ANIL 2025 (maille),0.0579,False,,True
+72006,Arçonnay,arconnay,Maison,1495.0,20,1442.0,19.0,0.037,7.22,ANIL 2025,0.0579,True,,True
+72329,Savigné-l'Évêque,savigne l eveque,Maison,1959.0,44,1946.0,38.0,0.0062,9.45,ANIL 2025,0.0579,True,,True
+72119,Domfront-en-Champagne,domfront en champagne,Maison,1589.0,13,1663.0,7.0,,7.66,ANIL 2025 (maille),0.0578,False,,True
+72186,Maresché,maresche,Maison,1328.0,8,1068.0,4.0,,6.4,ANIL 2025 (maille),0.0578,False,,True
+72262,Loir en Vallée,loir en vallee,Maison,1232.0,19,1061.0,35.0,0.1615,5.92,ANIL 2025 (maille),0.0577,True,,True
+72118,Dollon,dollon,Maison,1380.0,12,1250.0,27.0,0.1043,6.63,ANIL 2025,0.0576,False,,True
+72175,Luché-Pringé,luche pringe,Maison,1447.0,17,1242.0,12.0,,6.95,ANIL 2025 (maille),0.0576,True,,True
+72344,Spay,spay,Maison,2019.0,30,2038.0,25.0,-0.0096,9.65,ANIL 2025,0.0573,True,,True
+72386,Yvré-l'Évêque,yvre l eveque,Maison,2181.0,48,1960.0,26.0,0.113,10.42,ANIL 2025,0.0573,True,,True
+72079,Chérisay,cherisay,Maison,1387.0,5,987.0,1.0,,6.62,ANIL 2025 (maille),0.0572,False,,True
+72249,La Quinte,la quinte,Maison,1607.0,7,2061.0,8.0,,7.66,ANIL 2025 (maille),0.0572,False,,True
+72355,Thoiré-sous-Contensor,thoire sous contensor,Maison,1286.0,1,875.0,2.0,,6.13,ANIL 2025 (maille),0.0572,False,,True
+72166,Longnes,longnes,Maison,1513.0,3,1847.0,3.0,,7.21,ANIL 2025 (maille),0.0572,False,,True
+72115,Dissay-sous-Courcillon,dissay sous courcillon,Maison,1274.0,10,1155.0,8.0,,6.07,ANIL 2025 (maille),0.0572,False,,True
+72084,Clermont-Créans,clermont creans,Maison,1458.0,11,1636.0,15.0,-0.1083,6.94,ANIL 2025 (maille),0.0571,False,,True
+72096,Coulans-sur-Gée,coulans sur gee,Maison,1626.0,18,1871.0,11.0,,7.71,ANIL 2025,0.0569,True,,True
+72158,Lavaré,lavare,Maison,1250.0,14,1499.0,9.0,,5.92,ANIL 2025 (maille),0.0568,False,,True
+72042,Bouloire,bouloire,Maison,1429.0,33,1280.0,25.0,0.1156,6.76,ANIL 2025,0.0568,True,,True
+72188,Marollette,marollette,Maison,1538.0,1,,,,7.26,ANIL 2025 (maille),0.0566,False,,True
+72346,La Suze-sur-Sarthe,la suze sur sarthe,Maison,1736.0,45,1554.0,48.0,0.1172,8.18,ANIL 2025,0.0565,True,,True
+72281,Saint-Georges-du-Rosay,saint georges du rosay,Maison,1396.0,4,446.0,2.0,,6.56,ANIL 2025 (maille),0.0564,False,,True
+72160,Lavernat,lavernat,Maison,1296.0,9,2021.0,3.0,,6.07,ANIL 2025 (maille),0.0562,False,,True
+72133,Fillé,fille,Maison,1957.0,11,1877.0,8.0,,9.14,ANIL 2025 (maille),0.056,False,,True
+72335,Sillé-le-Philippe,sille le philippe,Maison,1588.0,14,1698.0,14.0,,7.41,ANIL 2025 (maille),0.056,False,,True
+72226,Oizé,oize,Maison,1493.0,12,1349.0,11.0,,6.94,ANIL 2025 (maille),0.0558,False,,True
+72168,Loué,loue,Maison,1532.0,25,1382.0,18.0,0.109,7.11,ANIL 2025,0.0557,True,,True
+72167,Louailles,louailles,Maison,1488.0,5,1583.0,8.0,,6.9,ANIL 2025 (maille),0.0556,False,,True
+72201,Moncé-en-Saosnois,monce en saosnois,Maison,1337.0,2,1120.0,2.0,,6.19,ANIL 2025 (maille),0.0556,False,,True
+72220,Nogent-le-Bernard,nogent le bernard,Maison,1427.0,12,912.0,7.0,,6.61,ANIL 2025 (maille),0.0556,False,,True
+72315,Saint-Rémy-de-Sillé,saint remy de sille,Maison,1315.0,10,569.0,8.0,,6.08,ANIL 2025 (maille),0.0555,False,,True
+72154,La Flèche,la fleche,Maison,1705.0,113,1722.0,115.0,-0.0102,7.84,ANIL 2025,0.0552,True,,True
+72127,Étival-lès-le-Mans,etival les le mans,Maison,1989.0,13,1978.0,22.0,0.0056,9.14,ANIL 2025 (maille),0.0551,False,,True
+72047,Brette-les-Pins,brette les pins,Maison,1620.0,11,1728.0,15.0,-0.0626,7.43,ANIL 2025,0.055,False,,True
+72061,La Chapelle-d'Aligné,la chapelle d aligne,Maison,1505.0,17,1430.0,12.0,,6.9,ANIL 2025 (maille),0.055,True,,True
+72004,Amné,amne,Maison,1398.0,4,1265.0,4.0,,6.4,ANIL 2025 (maille),0.0549,False,,True
+72045,Brains-sur-Gée,brains sur gee,Maison,1575.0,7,1400.0,8.0,,7.21,ANIL 2025 (maille),0.0549,False,,True
+72155,Laigné-en-Belin,laigne en belin,Maison,1818.0,27,1986.0,24.0,-0.0843,8.25,ANIL 2025,0.0544,True,,True
+72129,Fatines,fatines,Maison,2120.0,8,1974.0,7.0,,9.6,ANIL 2025 (maille),0.0543,False,,True
+72246,Prévelles,prevelles,Maison,1379.0,2,1630.0,1.0,,6.25,ANIL 2025 (maille),0.0543,False,,True
+72026,Beaufay,beaufay,Maison,1498.0,18,2049.0,8.0,,6.78,ANIL 2025,0.0543,True,,True
+72300,Saint-Mars-la-Brière,saint mars la briere,Maison,1757.0,22,1639.0,16.0,0.072,7.89,ANIL 2025,0.0539,True,,True
+72213,Mulsanne,mulsanne,Maison,1978.0,33,1956.0,41.0,0.0113,8.88,ANIL 2025,0.0539,True,,True
+72276,Saint-Cosme-en-Vairais,saint cosme en vairais,Maison,1382.0,25,1051.0,20.0,0.3144,6.2,ANIL 2025,0.0538,True,,True
+72292,Saint-Jean-des-Échelles,saint jean des echelles,Maison,1417.0,3,670.0,1.0,,6.33,ANIL 2025 (maille),0.0536,False,,True
+72244,Précigné,precigne,Maison,1555.0,36,1595.0,28.0,-0.0249,6.93,ANIL 2025,0.0535,True,,True
+72363,Tuffé Val de la Chéronne,tuffe val de la cheronne,Maison,1475.0,20,1467.0,15.0,0.0057,6.56,ANIL 2025 (maille),0.0534,True,,True
+72377,Villaines-sous-Malicorne,villaines sous malicorne,Maison,1560.0,9,1148.0,9.0,,6.94,ANIL 2025 (maille),0.0534,False,,True
+72327,Sarcé,sarce,Maison,1560.0,2,958.0,3.0,,6.94,ANIL 2025 (maille),0.0534,False,,True
+72095,Coulaines,coulaines,Maison,1940.0,39,2132.0,42.0,-0.0901,8.62,ANIL 2025,0.0533,True,,True
+72165,Lombron,lombron,Maison,1667.0,21,1724.0,19.0,-0.0333,7.41,ANIL 2025 (maille),0.0533,True,,True
+72130,Fay,fay,Maison,1903.0,8,1888.0,6.0,,8.41,ANIL 2025 (maille),0.053,False,,True
+72308,Saint-Paterne - Le Chevain,saint paterne le chevain,Maison,1644.0,21,1713.0,17.0,-0.0406,7.26,ANIL 2025 (maille),0.053,True,,True
+72204,Montaillé,montaille,Maison,1341.0,5,756.0,7.0,,5.92,ANIL 2025 (maille),0.053,False,,True
+72199,Moitron-sur-Sarthe,moitron sur sarthe,Maison,1532.0,4,1721.0,1.0,,6.76,ANIL 2025 (maille),0.0529,False,,True
+72339,Souligné-Flacé,souligne flace,Maison,1635.0,12,1892.0,9.0,,7.21,ANIL 2025 (maille),0.0529,False,,True
+72378,Vion,vion,Maison,1564.0,11,1282.0,14.0,,6.9,ANIL 2025 (maille),0.0529,False,,True
+72002,Aillières-Beauvoir,aillieres beauvoir,Maison,1649.0,3,1347.0,1.0,,7.26,ANIL 2025 (maille),0.0529,False,,True
+72067,La Chapelle-Saint-Rémy,la chapelle saint remy,Maison,1500.0,10,1890.0,6.0,,6.56,ANIL 2025 (maille),0.0525,False,,True
+72326,Saosnes,saosnes,Maison,1662.0,2,924.0,3.0,,7.26,ANIL 2025 (maille),0.0524,False,,True
+72297,Saint-Marceau,saint marceau,Maison,1471.0,7,1383.0,7.0,,6.4,ANIL 2025 (maille),0.0522,False,,True
+72028,Beaumont-Pied-de-Bœuf,beaumont pied de buf,Maison,1538.0,3,926.0,4.0,,6.68,ANIL 2025 (maille),0.0521,False,,True
+72001,Aigné,aigne,Maison,1946.0,19,2233.0,6.0,,8.45,ANIL 2025,0.0521,True,,True
+72247,Pruillé-le-Chétif,pruille le chetif,Maison,1938.0,12,1826.0,8.0,,8.41,ANIL 2025 (maille),0.0521,False,,True
+72145,Le Grez,le grez,Maison,1404.0,2,1217.0,2.0,,6.08,ANIL 2025 (maille),0.052,False,,True
+72021,Avoise,avoise,Maison,1479.0,11,1746.0,7.0,,6.39,ANIL 2025 (maille),0.0518,False,,True
+72156,Lamnay,lamnay,Maison,1378.0,11,1365.0,8.0,,5.92,ANIL 2025 (maille),0.0516,False,,True
+72321,Saint-Symphorien,saint symphorien,Maison,1493.0,3,1153.0,6.0,,6.4,ANIL 2025 (maille),0.0515,False,,True
+72289,Sainte-Jamme-sur-Sarthe,sainte jamme sur sarthe,Maison,1802.0,32,1617.0,27.0,0.1144,7.7,ANIL 2025,0.0513,True,,True
+72319,Sainte-Sabine-sur-Longève,sainte sabine sur longeve,Maison,1680.0,7,1630.0,8.0,,7.15,ANIL 2025 (maille),0.0511,False,,True
+72231,Parigné-l'Évêque,parigne l eveque,Maison,1947.0,48,1886.0,37.0,0.0324,8.29,ANIL 2025,0.0511,True,,True
+72054,Champagné,champagne,Maison,1932.0,31,1722.0,15.0,0.122,8.21,ANIL 2025,0.051,True,,True
+72380,Vivoin,vivoin,Maison,1443.0,12,1317.0,7.0,,6.13,ANIL 2025 (maille),0.0509,False,,True
+72010,Asnières-sur-Vègre,asnieres sur vegre,Maison,1507.0,1,682.0,1.0,,6.39,ANIL 2025 (maille),0.0509,False,,True
+72083,Chevillé,cheville,Maison,1510.0,1,970.0,1.0,,6.39,ANIL 2025 (maille),0.0508,False,,True
+72196,Mézières-sur-Ponthouin,mezieres sur ponthouin,Maison,1467.0,14,935.0,5.0,,6.19,ANIL 2025 (maille),0.0507,False,,True
+72336,Solesmes,solesmes,Maison,1635.0,8,1606.0,14.0,,6.9,ANIL 2025 (maille),0.0506,False,,True
+72341,Soulitré,soulitre,Maison,1760.0,7,1574.0,15.0,0.1181,7.41,ANIL 2025 (maille),0.0505,False,,True
+72088,Congé-sur-Orne,conge sur orne,Maison,1459.0,2,484.0,3.0,,6.13,ANIL 2025 (maille),0.0504,False,,True
+72223,Noyen-sur-Sarthe,noyen sur sarthe,Maison,1600.0,29,1393.0,34.0,0.1487,6.64,ANIL 2025,0.0498,True,,True
+72152,Juillé,juille,Maison,1632.0,5,1813.0,2.0,,6.76,ANIL 2025 (maille),0.0497,False,,True
+72331,Sceaux-sur-Huisne,sceaux sur huisne,Maison,1587.0,7,1078.0,7.0,,6.56,ANIL 2025 (maille),0.0496,False,,True
+72075,Chemiré-le-Gaudin,chemire le gaudin,Maison,1720.0,13,1217.0,12.0,,7.1,ANIL 2025 (maille),0.0495,False,,True
+72350,Teloché,teloche,Maison,1991.0,25,1920.0,27.0,0.0367,8.21,ANIL 2025,0.0495,True,,True
+72245,Préval,preval,Maison,1516.0,10,1762.0,5.0,,6.25,ANIL 2025 (maille),0.0494,False,,True
+72056,Champfleur,champfleur,Maison,1609.0,16,1401.0,8.0,,6.62,ANIL 2025 (maille),0.0493,True,,True
+72271,Saint-Célerin,saint celerin,Maison,1597.0,10,1485.0,10.0,,6.56,ANIL 2025 (maille),0.0493,False,,True
+72177,Maigné,maigne,Maison,1733.0,3,1331.0,2.0,,7.1,ANIL 2025 (maille),0.0492,False,,True
+72024,La Bazoge,la bazoge,Maison,2106.0,28,2006.0,30.0,0.0497,8.63,ANIL 2025,0.0492,True,,True
+72359,Torcé-en-Vallée,torce en vallee,Maison,1809.0,14,1741.0,12.0,,7.41,ANIL 2025 (maille),0.0491,False,,True
+72299,Saint-Mars-d'Outillé,saint mars d outille,Maison,1722.0,20,1318.0,18.0,0.3069,7.04,ANIL 2025,0.0491,True,,True
+72070,Chassillé,chassille,Maison,1568.0,5,2662.0,1.0,,6.4,ANIL 2025 (maille),0.049,False,,True
+72218,Neuvillette-en-Charnie,neuvillette en charnie,Maison,1490.0,4,475.0,2.0,,6.08,ANIL 2025 (maille),0.049,False,,True
+72048,Briosne-lès-Sables,briosne les sables,Maison,1509.0,6,1085.0,2.0,,6.13,ANIL 2025 (maille),0.0487,False,,True
+72163,Ligron,ligron,Maison,1705.0,5,1274.0,6.0,,6.92,ANIL 2025 (maille),0.0487,False,,True
+72106,Courtillers,courtillers,Maison,1700.0,13,1989.0,4.0,,6.9,ANIL 2025 (maille),0.0487,False,,True
+72031,Beillé,beille,Maison,1619.0,5,961.0,8.0,,6.56,ANIL 2025 (maille),0.0486,False,,True
+72219,Bernay-Neuvy-en-Champagne,bernay neuvy en champagne,Maison,1581.0,7,957.0,11.0,,6.4,ANIL 2025 (maille),0.0486,False,,True
+72181,Le Mans,le mans,Maison,2182.0,1013,2106.0,880.0,0.0359,8.8,ANIL 2025,0.0484,True,,True
+72360,Trangé,trange,Maison,2088.0,16,2043.0,13.0,,8.41,ANIL 2025 (maille),0.0483,True,,True
+72277,Saint-Denis-des-Coudrais,saint denis des coudrais,Maison,1558.0,1,1770.0,1.0,,6.25,ANIL 2025 (maille),0.0481,False,,True
+72328,Sargé-lès-le-Mans,sarge les le mans,Maison,2181.0,41,2370.0,20.0,-0.0798,8.74,ANIL 2025,0.0481,True,,True
+72157,Lavardin,lavardin,Maison,1916.0,10,1712.0,9.0,,7.66,ANIL 2025 (maille),0.048,False,,True
+72256,Rouez,rouez,Maison,1525.0,5,951.0,5.0,,6.08,ANIL 2025 (maille),0.0479,False,,True
+72254,Rouessé-Fontaine,rouesse fontaine,Maison,1709.0,2,500.0,5.0,,6.77,ANIL 2025 (maille),0.0475,False,,True
+72059,Chantenay-Villedieu,chantenay villedieu,Maison,1615.0,6,1154.0,5.0,,6.39,ANIL 2025 (maille),0.0475,False,,True
+72131,Fercé-sur-Sarthe,ferce sur sarthe,Maison,1797.0,4,1242.0,11.0,,7.1,ANIL 2025 (maille),0.0474,False,,True
+72053,Challes,challes,Maison,1779.0,9,1607.0,12.0,,7.02,ANIL 2025 (maille),0.0473,False,,True
+72217,Neuville-sur-Sarthe,neuville sur sarthe,Maison,2066.0,36,1876.0,24.0,0.1012,8.09,ANIL 2025,0.047,True,,True
+72080,Cherré-Au,cherre au,Maison,1901.0,19,1822.0,16.0,0.0433,7.41,ANIL 2025,0.0468,True,,True
+72310,Saint-Pavace,saint pavace,Maison,2170.0,18,2194.0,18.0,-0.0112,8.41,ANIL 2025 (maille),0.0465,True,,True
+72076,Chenay,chenay,Maison,1765.0,1,1565.0,2.0,,6.84,ANIL 2025 (maille),0.0465,False,,True
+72320,Saint-Saturnin,saint saturnin,Maison,2172.0,19,2289.0,10.0,,8.41,ANIL 2025 (maille),0.0465,True,,True
+72072,Château-l'Hermitage,chateau l hermitage,Maison,2055.0,1,1326.0,2.0,,7.96,ANIL 2025 (maille),0.0465,False,,True
+72174,Lucé-sous-Ballon,luce sous ballon,Maison,1853.0,3,926.0,1.0,,7.15,ANIL 2025 (maille),0.0463,False,,True
+72261,Ruillé-en-Champagne,ruille en champagne,Maison,1667.0,1,1357.0,3.0,,6.4,ANIL 2025 (maille),0.0461,False,,True
+72073,Chaufour-Notre-Dame,chaufour notre dame,Maison,2119.0,12,1828.0,11.0,,8.11,ANIL 2025,0.0459,False,,True
+72260,Ruaudin,ruaudin,Maison,2168.0,32,2054.0,18.0,0.0556,8.3,ANIL 2025,0.0459,True,,True
+72066,La Chapelle-Saint-Fray,la chapelle saint fray,Maison,2003.0,3,1284.0,2.0,,7.66,ANIL 2025 (maille),0.0459,False,,True
+72198,La Milesse,la milesse,Maison,2226.0,18,2138.0,26.0,0.0412,8.44,ANIL 2025,0.0455,True,,True
+72183,Marçon,marcon,Maison,1685.0,3,1224.0,12.0,,6.37,ANIL 2025 (maille),0.0453,False,,True
+72062,La Chapelle-du-Bois,la chapelle du bois,Maison,1667.0,7,1257.0,12.0,,6.25,ANIL 2025 (maille),0.045,False,,True
+72212,Moulins-le-Carbonnel,moulins le carbonnel,Maison,1810.0,7,1147.0,5.0,,6.77,ANIL 2025 (maille),0.0449,False,,True
+72197,Mézières-sous-Lavardin,mezieres sous lavardin,Maison,1731.0,7,893.0,6.0,,6.4,ANIL 2025 (maille),0.0444,False,,True
+72065,La Chapelle-Saint-Aubin,la chapelle saint aubin,Maison,2332.0,24,2291.0,13.0,,8.54,ANIL 2025,0.044,True,,True
+72099,Courcebœufs,courcebufs,Maison,1968.0,4,1584.0,9.0,,7.15,ANIL 2025 (maille),0.0436,False,,True
+72034,Bérus,berus,Maison,1824.0,5,1890.0,2.0,,6.62,ANIL 2025 (maille),0.0435,False,,True
+72342,Souvigné-sur-Même,souvigne sur meme,Maison,1723.0,2,,,,6.25,ANIL 2025 (maille),0.0435,False,,True
+72205,Montbizot,montbizot,Maison,2006.0,16,1471.0,13.0,,7.15,ANIL 2025 (maille),0.0428,True,,True
+72257,Rouillon,rouillon,Maison,2359.0,18,2354.0,17.0,0.0023,8.41,ANIL 2025 (maille),0.0428,True,,True
+72347,Tassé,tasse,Maison,2000.0,2,967.0,5.0,,7.1,ANIL 2025 (maille),0.0426,False,,True
+72113,Degré,degre,Maison,2185.0,5,1766.0,5.0,,7.66,ANIL 2025 (maille),0.0421,False,,True
+72312,Saint-Pierre-des-Bois,saint pierre des bois,Maison,1833.0,1,1314.0,5.0,,6.39,ANIL 2025 (maille),0.0418,False,,True
+72114,Dehault,dehault,Maison,1887.0,5,,,,6.56,ANIL 2025 (maille),0.0417,False,,True
+72234,Pezé-le-Robert,peze le robert,Maison,1786.0,1,928.0,4.0,,6.08,ANIL 2025 (maille),0.0409,False,,True
+72125,Écorpain,ecorpain,Maison,1883.0,2,1438.0,3.0,,5.92,ANIL 2025 (maille),0.0377,False,,True
+72086,Commerveil,commerveil,Maison,2228.0,1,733.0,1.0,,6.19,ANIL 2025 (maille),0.0334,False,,True
+72362,Le Tronchet,le tronchet,Maison,2332.0,3,1909.0,3.0,,6.4,ANIL 2025 (maille),0.0329,False,,True
+72102,Courcival,courcival,Maison,2648.0,1,,,,6.61,ANIL 2025 (maille),0.0299,False,,True
+72379,Viré-en-Champagne,vire en champagne,Maison,2448.0,2,,,,5.96,ANIL 2025 (maille),0.0292,False,,True
