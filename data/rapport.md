@@ -1,6 +1,6 @@
 # Radar immobilier
 
-Département 72 | dernière vente DVF : 2025-12-31
+Sarthe (72) | dernière vente DVF : 2025-12-31
 
 Indicateurs statistiques calculés sur les ventes réelles (DVF). Ce n'est pas un conseil en investissement.
 

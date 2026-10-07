@@ -44,6 +44,16 @@ Pour chaque commune, le loyer au m² vient dans cet ordre de :
 
 Chaque ligne du rapport et de `data/marche_communes.csv` (colonne `loyer_origine`) indique l'origine utilisée. La carte des loyers est publiée sous Licence Ouverte 2.0 par le ministère chargé du logement et l'ANIL. Ce sont des loyers d'annonce **charges comprises** : le radar en retient 90 % (`loyer_officiel.coefficient`). Ajuste ce coefficient ou surcharge une commune si tu connais mieux le marché local.
 
+## Régler le radar depuis la page
+
+Tout se règle en direct sur la page de suivi, sans modifier de fichier. Les réglages sont mémorisés dans le navigateur de l'appareil utilisé (rien n'est envoyé) :
+
+- **Mes critères** : budget maximum, surface minimale, recherche de commune, tri, favoris.
+- **Tous les réglages** : département, ventes minimales par commune, part du loyer officiel retenue, loyers par défaut, marge de négociation, décote minimale, rendement net minimal, charges et vacance. Chaque commune permet aussi d'ajuster son loyer.
+- **Teste une annonce** et **Coller plusieurs annonces d'un coup** : analyse d'annonces sans toucher à `annonces.csv`.
+
+Le workflow `pages-departements` génère chaque lundi une page par département (`docs/d/<code>/`), ce qui permet de changer de département depuis le sélecteur. `config.yml` ne fixe plus que les valeurs de départ, le département de la page d'accueil et le comportement du workflow quotidien (alertes Telegram, import e-mail). Les secrets Telegram et IMAP ne peuvent pas se régler depuis la page : ils restent dans les paramètres GitHub.
+
 ## Scorer des annonces
 
 Ajoute des lignes dans `annonces.csv` (colonnes : `url,type_local,commune,surface,prix,titre`, type = `Appartement` ou `Maison`). Un push sur ce fichier relance l'analyse. Une annonce est signalée comme opportunité si sa décote par rapport à la médiane DVF et son rendement net estimé dépassent les seuils de `config.yml`, et si elle respecte le budget et la surface minimale. Les résultats sont dans `data/opportunites.csv` (colonne `note` pour les cas écartés).

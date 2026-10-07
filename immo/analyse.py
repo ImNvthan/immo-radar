@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from immo.departements import libelle as libelle_dep  # noqa: E402
 from immo.loyers import charger_loyers_officiels  # noqa: E402
 from immo.reseau import ErreurTelechargement, Introuvable, telecharger  # noqa: E402
 
@@ -382,7 +383,7 @@ def fr(x, nd=1) -> str:
 
 def libelle_zone(cfg) -> str:
     z = cfg["zone"]
-    txt = "Département" + ("s " if len(z["departements"]) > 1 else " ") + ", ".join(z["departements"])
+    txt = ", ".join(libelle_dep(d) for d in z["departements"])
     if z["communes"]:
         txt += f" (communes : {', '.join(z['communes'])})"
     return txt
@@ -508,6 +509,8 @@ def ecrire_meta(cfg, ref, data_dir):
         "zone": libelle_zone(cfg), "derniere_vente": str(ref.date()),
         "budget_max": cfg["budget_max"], "surface_min": cfg["surface_min"],
         "seuils": cfg["annonces"], "min_ventes": cfg["min_ventes"],
+        "departements": cfg["zone"]["departements"],
+        "loyer_coef": cfg["loyer_officiel"]["coefficient"], "loyer_defaut": cfg["loyer_m2_defaut"],
     }
     (data_dir / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 

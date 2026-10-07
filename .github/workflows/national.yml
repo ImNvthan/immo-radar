@@ -1,0 +1,77 @@
+name: pages-departements
+
+on:
+  schedule:
+    - cron: "30 3 * * 1"   # chaque lundi, le DVF ne change que quelques fois par an
+  workflow_dispatch:
+  push:
+    paths:
+      - immo/national.py
+      - immo/page.py
+      - immo/page.js
+      - immo/departements.py
+      - immo/analyse.py
+      - .github/workflows/national.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: immo-radar
+  cancel-in-progress: false
+
+jobs:
+  departements:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Semaine courante (clé de cache)
+        id: semaine
+        run: echo "valeur=$(date +%G-%V)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache des données téléchargées (DVF et loyers)
+        uses: actions/cache@v4
+        with:
+          path: data/cache
+          key: national-${{ steps.semaine.outputs.valeur }}
+          restore-keys: |
+            national-
+            donnees-
+
+      - name: Génération d'une page par département
+        run: python immo/national.py
+
+      - name: Commit des pages
+        run: |
+          git config user.name "immo-radar"
+          git config user.email "immo-radar@users.noreply.github.com"
+          git add docs/d
+          if git diff --cached --quiet; then
+            echo "Aucun changement, pas de commit."
+          else
+            git commit -m "maj pages départements"
+            git pull --rebase --autostash -q
+            git push
+          fi
+
+      - name: Alerte Telegram en cas d'échec
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
+            curl -sS --fail -o /dev/null "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+              --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+              --data-urlencode "text=La génération des pages départements a échoué : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" \
+              || echo "Alerte Telegram non envoyée"
+          fi

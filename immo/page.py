@@ -6,9 +6,14 @@ Direction visuelle : un radar. Hero bleu Klein aux chiffres géants, saisonnalit
 import html
 import json
 import math
+import sys
 from pathlib import Path
 
 import pandas as pd
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from immo.departements import NOMS  # noqa: E402
 
 MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
 TYPES = ("Appartement", "Maison")
@@ -137,6 +142,12 @@ button.btn.sec{background:transparent;color:var(--encre);border:1.5px solid var(
 .opp .decote.cher{color:var(--signal)}
 .opp .suppr{font:inherit;font-size:.85rem;background:transparent;border:0;color:var(--doux);text-decoration:underline;cursor:pointer;padding:6px 0;text-align:left}
 .sous-titre{font-family:var(--display);font-weight:800;letter-spacing:-.03em;font-size:1.5rem;margin:40px 0 14px}
+.reglages-sec{margin-top:14px}
+.reglages summary{cursor:pointer;font-weight:700;font-size:1.1rem;min-height:32px}
+.reglages .sous-titre{margin:24px 0 12px;font-size:1.2rem}
+.champ .aide{line-height:1.35}
+.ovl{grid-column:1/-1;display:flex;align-items:center;gap:10px;color:var(--doux);font-size:.85rem;flex-wrap:wrap}
+.ovl input{width:110px;font:inherit;color:var(--encre);background:var(--papier);border:1.5px solid var(--trait);border-radius:10px;padding:6px 10px}
 .coller{margin-top:14px}
 .aide{color:var(--doux);font-size:.85rem}
 .coller summary{cursor:pointer;font-weight:700;font-size:1.1rem;min-height:32px}
@@ -377,6 +388,36 @@ def bloc_criteres(meta) -> str:
             "Tes critères, tes favoris et tes annonces restent sur cet appareil : rien n'est envoyé.</p></div></div></section>")
 
 
+def champ_reglage(ident, libelle, aide, pas="any", mini="0"):
+    return (f"<div class='champ'><label for='{ident}'>{libelle}</label>"
+            f"<input id='{ident}' type='number' inputmode='decimal' min='{mini}' step='{pas}'><small class='aide'>{aide}</small></div>")
+
+
+def bloc_reglages(meta, prefixe="") -> str:
+    courant = (meta.get("departements") or [""])[0]
+    options = "".join(f"<option value='{e(c)}'{' selected' if c == courant else ''}>{e(n)} ({e(c)})</option>" for c, n in sorted(NOMS.items(), key=lambda kv: kv[1]))
+    return ("<section class='reglages-sec js-only' aria-label='Réglages'><div class='wrap'><details class='carte reglages'>"
+            "<summary>Tous les réglages</summary>"
+            "<p class='intro'>Chaque réglage s'applique tout de suite au classement et à l'analyse d'annonces, et reste mémorisé sur cet appareil. "
+            "Les valeurs de départ viennent de la configuration du radar.</p>"
+            "<h3 class='sous-titre'>Zone</h3><div class='champs'>"
+            f"<div class='champ'><label for='r-dep'>Département</label><select id='r-dep' data-prefixe='{e(prefixe)}'>{options}</select>"
+            "<small class='aide'>Ouvre la page du département choisi (prix, tendance et saisonnalité propres).</small></div></div>"
+            "<h3 class='sous-titre'>Fiabilité et loyers</h3><div class='champs'>"
+            + champ_reglage("r-min", "Ventes minimales par commune", "En dessous, la commune est jugée peu fiable et masquée.", "1", "1")
+            + champ_reglage("r-coef", "Part du loyer officiel retenue (%)", "La carte ANIL donne des loyers charges comprises : 90 % par défaut.", "1")
+            + champ_reglage("r-lapp", "Loyer par défaut, appartement (€/m²)", "Utilisé si la carte officielle n'a pas la commune.", "0.1")
+            + champ_reglage("r-lmai", "Loyer par défaut, maison (€/m²)", "Même usage pour les maisons.", "0.1")
+            + "</div><h3 class='sous-titre'>Annonces</h3><div class='champs'>"
+            + champ_reglage("r-marge", "Marge de négociation (%)", "Remise moyenne supposée entre prix affiché et prix signé.", "0.5")
+            + champ_reglage("r-decote", "Décote minimale (%)", "Écart sous la médiane pour parler d'opportunité.", "0.5")
+            + champ_reglage("r-rend", "Rendement net minimal (%)", "Rendement net estimé minimal pour une opportunité.", "0.1")
+            + champ_reglage("r-charges", "Charges et vacance (%)", "Part du loyer perdue en charges, taxe foncière et vacance.", "1")
+            + "</div><div class='actions'><button type='button' class='btn sec' id='r-reset'>Revenir aux valeurs de départ</button></div>"
+            "<p class='note'>Pas modifiables ici : les alertes Telegram et l'import e-mail. Ils utilisent des secrets qui doivent rester privés et se règlent dans GitHub.</p>"
+            "</details></div></section>")
+
+
 def bloc_analyseur() -> str:
     return ("<section class='bloc js-only' id='analyseur'><div class='wrap'><p class='mono'>Annonce</p><h2>Teste une annonce</h2>"
             "<p class='intro'>Recopie le prix et la surface d'une annonce vue ailleurs. Le radar la compare aux ventes réelles de la commune et estime le rendement net.</p>"
@@ -426,6 +467,7 @@ def donnees_js(stats, meta, types) -> dict:
     def v(x, nd):
         return None if x is None or pd.isna(x) else round(float(x), nd)
 
+    coef = float(meta.get("loyer_coef") or 1) or 1.0
     communes = []
     if not stats.empty:
         for _, r in stats.iterrows():
@@ -433,14 +475,17 @@ def donnees_js(stats, meta, types) -> dict:
                 "c": str(r["nom_commune"]), "k": str(r.get("code_commune", r["nom_commune"])), "t": r["type_local"], "p": v(r["prix_m2_median"], 0),
                 "n": int(r["n_ventes"]), "e": v(r["evolution_12m"], 4), "l": v(r["loyer_m2"], 2), "o": str(r["loyer_origine"]),
                 "r": v(r["rendement_brut"], 4), "f": bool(r["fiable"]),
+                "b": v(float(r["loyer_m2"]) / coef, 3) if str(r["loyer_origine"]).startswith("ANIL") else None,
             })
     seuils = {"marge_negociation": 0.05, "decote_min": 0.08, "rendement_net_min": 0.045, "charges_et_vacance": 0.25}
     seuils.update(meta.get("seuils") or {})
     return {"types": types, "communes": communes, "seuils": seuils,
-            "budget_max": meta.get("budget_max", 0) or 0, "surface_min": meta.get("surface_min", 0) or 0}
+            "budget_max": meta.get("budget_max", 0) or 0, "surface_min": meta.get("surface_min", 0) or 0,
+            "min_ventes": meta.get("min_ventes", 15), "loyer_coef": coef,
+            "loyer_defaut": meta.get("loyer_defaut") or {"Appartement": 12.0, "Maison": 10.0}}
 
 
-def generer_page(data_dir, sortie) -> str:
+def generer_page(data_dir, sortie, prefixe="") -> str:
     data = Path(data_dir)
     meta = {}
     if (data / "meta.json").exists():
@@ -459,7 +504,7 @@ def generer_page(data_dir, sortie) -> str:
 <meta name="color-scheme" content="light dark"><meta name="theme-color" content="#1b2bff">
 <title>Radar immobilier</title><style>{CSS}</style></head><body>
 {bloc_hero(tend, meta, types)}
-<main>{bloc_criteres(meta)}{bloc_courbe(serie, types)}{bloc_saison(saison, types)}{bloc_communes(stats, types, meta)}{bloc_analyseur()}{bloc_opportunites(opp)}</main>
+<main>{bloc_criteres(meta)}{bloc_reglages(meta, prefixe)}{bloc_courbe(serie, types)}{bloc_saison(saison, types)}{bloc_communes(stats, types, meta)}{bloc_analyseur()}{bloc_opportunites(opp)}</main>
 <footer><div class="wrap"><p><b>Indicateurs statistiques, pas un conseil en investissement.</b> Les prix viennent des ventes réelles (DVF, Etalab, Licence Ouverte) et les loyers de la carte des loyers ANIL (Licence Ouverte 2.0) ou de config.yml. Page régénérée à chaque exécution du workflow. Tes critères et tes annonces restent dans ton navigateur.</p></div></footer>
 <script type="application/json" id="donnees">{donnees}</script>
 <script>{JS}</script></body></html>

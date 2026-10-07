@@ -1,5 +1,5 @@
 {
- "zone": "Département 72",
+ "zone": "Sarthe (72)",
  "derniere_vente": "2025-12-31",
  "budget_max": 0.0,
  "surface_min": 0.0,
@@ -9,5 +9,13 @@
   "rendement_net_min": 0.045,
   "charges_et_vacance": 0.25
  },
- "min_ventes": 15
+ "min_ventes": 15,
+ "departements": [
+  "72"
+ ],
+ "loyer_coef": 0.9,
+ "loyer_defaut": {
+  "Appartement": 12.0,
+  "Maison": 10.0
+ }
 }
