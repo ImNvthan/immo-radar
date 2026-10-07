@@ -8,6 +8,9 @@ on:
     paths:
       - annonces.csv
       - config.yml
+      - immo/**
+      - requirements.txt
+      - .github/workflows/immo.yml
 
 permissions:
   contents: write
@@ -30,6 +33,25 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - name: Semaine courante (clé de cache)
+        id: semaine
+        run: echo "valeur=$(date +%G-%V)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache des données téléchargées (DVF et loyers)
+        uses: actions/cache@v4
+        with:
+          path: data/cache
+          key: donnees-${{ steps.semaine.outputs.valeur }}
+          restore-keys: donnees-
+
+      - name: Import des annonces depuis la boîte mail (si IMAP configuré)
+        continue-on-error: true
+        run: python immo/import_email.py
+        env:
+          IMAP_HOST: ${{ secrets.IMAP_HOST }}
+          IMAP_USER: ${{ secrets.IMAP_USER }}
+          IMAP_PASSWORD: ${{ secrets.IMAP_PASSWORD }}
+
       - name: Analyse
         run: python immo/analyse.py
         env:
@@ -40,6 +62,30 @@ jobs:
         run: |
           git config user.name "immo-radar"
           git config user.email "immo-radar@users.noreply.github.com"
-          git add data
-          git diff --cached --quiet || git commit -m "maj données"
+          git add data docs annonces.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "maj données"
+          else
+            # GitHub désactive les workflows planifiés après 60 jours sans activité : un commit vide tous les 25 jours suffit.
+            age=$(( $(date +%s) - $(git log -1 --format=%ct) ))
+            if [ "$age" -gt $(( 25 * 86400 )) ]; then
+              git commit --allow-empty -m "maintien du workflow actif"
+            else
+              echo "Aucun changement, pas de commit."
+            fi
+          fi
+          git pull --rebase --autostash -q
           git push
+
+      - name: Alerte Telegram en cas d'échec
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
+            curl -sS --fail -o /dev/null "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+              --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+              --data-urlencode "text=Le radar immobilier a échoué : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" \
+              || echo "Alerte Telegram non envoyée"
+          fi
