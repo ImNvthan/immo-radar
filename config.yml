@@ -1,18 +1,32 @@
-# Zone analysée (code département, 2 ou 3 caractères)
+# ZONE ANALYSEE
+# Le département 49 (Maine-et-Loire) est une valeur d'exemple : A CHANGER pour ta zone.
 zone:
-  departement: "49"
-  nb_annees: 3          # nombre d'années DVF chargées (année en cours incluse)
+  departements: ["49"]   # un ou plusieurs codes (ex. ["44", "49", "85"]). L'ancien format `departement: "49"` reste accepté.
+  communes: []           # optionnel : restreint l'analyse à ces communes (nom ou code INSEE). Vide = tout le département.
+  #  exemple : ["Angers", "49099", "Saumur"]
+  nb_annees: 3           # nombre d'années DVF chargées (les plus récentes disponibles)
 
 # Echantillon minimum de ventes pour qu'une moyenne soit jugée fiable
 min_ventes: 15
 
-# Loyers de marché en euros par m2 et par mois (A ADAPTER, ce sont des estimations)
+# CRITERES D'ACHAT (0 = pas de limite)
+budget_max: 0            # en euros : les annonces plus chères sont écartées
+surface_min: 0           # en m2 : les annonces plus petites sont écartées
+# Si les deux sont renseignés, le classement des communes ne garde que celles où un bien de
+# surface_min m2 au prix médian reste dans le budget.
+
+# LOYERS DE MARCHE en euros par m2 et par mois
+# Ordre de priorité : 1) loyers_communes ci-dessous, 2) carte des loyers officielle (ANIL, téléchargée
+# automatiquement), 3) valeurs par défaut ci-dessous (utilisées seulement si la carte est indisponible).
 loyer_m2_defaut:
   Appartement: 12.0
   Maison: 10.0
-# Exemple de surcharge par commune (nom sans accent, en minuscules)
-loyers_communes: {}
+loyers_communes: {}      # surcharge manuelle par nom de commune ou code INSEE, sur le modèle :
 #  angers: 13.5
+#  "49007": {Appartement: 13.5, Maison: 11}
+loyer_officiel:
+  actif: true
+  coefficient: 0.9       # la carte donne des loyers d'annonce charges comprises : on retient 90 % de leur valeur
 
 # Réglages de scoring des annonces (fichier annonces.csv)
 annonces:
