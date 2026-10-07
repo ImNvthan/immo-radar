@@ -137,6 +137,11 @@ button.btn.sec{background:transparent;color:var(--encre);border:1.5px solid var(
 .opp .decote.cher{color:var(--signal)}
 .opp .suppr{font:inherit;font-size:.85rem;background:transparent;border:0;color:var(--doux);text-decoration:underline;cursor:pointer;padding:6px 0;text-align:left}
 .sous-titre{font-family:var(--display);font-weight:800;letter-spacing:-.03em;font-size:1.5rem;margin:40px 0 14px}
+.coller{margin-top:14px}
+.coller summary{cursor:pointer;font-weight:700;font-size:1.1rem;min-height:32px}
+.coller[open] summary{margin-bottom:12px}
+.champ textarea{font:inherit;color:var(--encre);background:var(--papier);border:1.5px solid var(--trait);border-radius:14px;padding:12px 14px;width:100%;resize:vertical}
+.champ textarea:focus{border-color:var(--bleu);outline:none;box-shadow:0 0 0 3px rgba(27,43,255,.25)}
 @media (prefers-reduced-motion:reduce){.hero .radar-bg .sweep,.radar .balai{animation:none}html{scroll-behavior:auto}}
 """
 
@@ -384,6 +389,12 @@ def bloc_analyseur() -> str:
             "</div><datalist id='liste-noms'></datalist>"
             "<div id='resultat' class='resultat' aria-live='polite'></div>"
             "<div class='actions'><button type='submit' class='btn' id='a-enreg' disabled>Enregistrer l'annonce</button></div></form></div>"
+            "<details class='carte coller'><summary>Coller plusieurs annonces d'un coup</summary>"
+            "<p class='intro'>Copie le texte d'une page de résultats ou d'un e-mail d'alerte reçu des sites d'annonces, puis colle-le ici. "
+            "Le radar repère les prix, surfaces et communes de la zone et classe les annonces de la plus forte décote à la plus faible.</p>"
+            "<div class='champ'><label for='p-texte'>Texte copié</label><textarea id='p-texte' rows='8' placeholder='Maison 4 pièces, Sablé-sur-Sarthe, 95 m², 189 000 €&#10;https://…'></textarea></div>"
+            "<div class='actions'><button type='button' class='btn' id='p-analyser'>Analyser le texte</button></div>"
+            "<div id='p-resultats' class='resultat' aria-live='polite'></div></details>"
             "<h3 class='sous-titre'>Mes annonces enregistrées</h3><div id='mes-annonces'></div></div></section>")
 
 

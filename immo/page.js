@@ -184,6 +184,73 @@
     store.set('annonces', annonces); rendreAnnonces();
   });
 
+  /* ---- import de texte collé (annonces ou e-mail d'alerte) ---- */
+  var noms = [];
+  (function () {
+    var vus = {};
+    C.forEach(function (c) { var n = norm(c.c); if (!vus[n]) { vus[n] = 1; noms.push(n); } });
+    noms.sort(function (a, b) { return b.length - a.length; });
+  })();
+  var RE_URL = /https?:\/\/[^\s<>"')]+/gi;
+  function lireNombre(s) { return parseFloat(String(s).replace(/[\s  .]/g, '').replace(',', '.')); }
+  function analyserBloc(txt, urlBloc) {
+    var t = txt.replace(/\s+/g, ' ');
+    var prix = null, m, rp = /(^|[^\w.,])(\d{1,3}(?:[\s  .]\d{3})+|\d{4,8})\s*(?:€|euros?\b)/gi;
+    while ((m = rp.exec(t))) { var v = lireNombre(m[2]); if (v >= 10000 && v <= 10000000) { prix = v; break; } }
+    var surface = null, rs = /(\d{1,4}(?:[.,]\d{1,2})?)\s*m(?:²|2)/gi;
+    while ((m = rs.exec(t))) { var s = parseFloat(m[1].replace(',', '.')); if (s >= 9 && s <= 1000) { surface = s; break; } }
+    var n = ' ' + norm(t) + ' ', commune = null;
+    for (var i = 0; i < noms.length; i++) { if (n.indexOf(' ' + noms[i] + ' ') >= 0) { commune = noms[i]; break; } }
+    var type = /\b(appartement|appart|studio|duplex|loft)\b|\b[tf][1-6]\b/i.test(t) ? 'Appartement' :
+      /\b(maison|pavillon|villa|longere|longère|fermette)\b/i.test(t) ? 'Maison' : etat.type;
+    var nom = null;
+    if (commune) { var c = trouverNorm(commune, type) || trouverNorm(commune, null); nom = c ? c.c : null; }
+    var u = urlBloc || ((t.match(/https?:\/\/[^\s<>"')]+/i) || [''])[0]);
+    return { type: type, commune: nom || '', surface: surface || 0, prix: prix || 0, loyer: 0, url: /^https?:\/\//i.test(u) ? u : '', ok: !!(nom && surface && prix) };
+  }
+  function trouverNorm(n, type) {
+    var best = null;
+    C.forEach(function (c) { if ((type === null || c.t === type) && norm(c.c) === n && (!best || c.n > best.n)) best = c; });
+    return best;
+  }
+  function decouper(texte) {
+    var urls = texte.match(RE_URL) || [];
+    var blocs = texte.split(/\n\s*\n/).filter(function (b) { return b.trim(); });
+    if (blocs.length <= 1 && urls.length > 1) {
+      blocs = []; var reste = texte, deb = 0, mm; RE_URL.lastIndex = 0;
+      while ((mm = RE_URL.exec(texte))) { blocs.push(texte.slice(deb, mm.index + mm[0].length)); deb = mm.index + mm[0].length; }
+    }
+    return blocs;
+  }
+  var colles = [];
+  $('#p-analyser').addEventListener('click', function () {
+    var blocs = decouper($('#p-texte').value), ignores = 0;
+    colles = [];
+    blocs.forEach(function (b) { var a = analyserBloc(b); if (a.ok) colles.push(a); else if (/[€\d]/.test(b)) ignores++; });
+    colles = colles.map(function (a) { return { a: a, r: evaluer(a) }; }).filter(function (x) { return !x.r.err; })
+      .sort(function (x, y) { return x.r.ecart - y.r.ecart; });
+    var z = $('#p-resultats');
+    if (!colles.length) { z.innerHTML = '<div class="vide"><b>Aucune annonce reconnue.</b>Colle le texte tel qu’il apparaît : il faut au moins un prix en €, une surface en m² et le nom d’une commune de la zone.</div>'; return; }
+    z.innerHTML = '<p class="legende">' + colles.length + ' annonce' + (colles.length > 1 ? 's' : '') + ' reconnue' + (colles.length > 1 ? 's' : '') +
+      (ignores ? ', ' + ignores + ' ignorée' + (ignores > 1 ? 's' : '') + ' (prix, surface ou commune introuvable)' : '') + ', classées de la plus forte décote à la plus faible.</p>' +
+      '<div class="opps">' + colles.map(function (x, i) {
+        var a = x.a, r = x.r;
+        return '<article class="opp ' + (r.opp ? 'top' : '') + '"><span class="decote ' + (r.ecart < 0 ? '' : 'cher') + '">' + pct(r.ecart, true) + '</span>' +
+          '<span class="mono">' + (r.opp ? 'opportunité' : 'vs médiane DVF') + '</span><span class="lieu">' + esc(r.c.c) + '</span>' +
+          '<span>' + esc(a.type) + ' · ' + nombre(a.surface) + ' m² · ' + nombre(a.prix) + ' €</span><span>Rendement net ' + pct(r.net) + '</span>' +
+          '<span class="legende">' + esc(r.txt) + '</span><button type="button" class="btn sec garder" data-i="' + i + '">Enregistrer</button></article>';
+      }).join('') + '</div><div class="actions"><button type="button" class="btn" id="p-tout">Tout enregistrer</button></div>';
+  });
+  function garder(liste) {
+    liste.forEach(function (x, k) { var a = Object.assign({}, x.a); delete a.ok; a.id = Date.now() + k; annonces.push(a); });
+    store.set('annonces', annonces); rendreAnnonces();
+  }
+  $('#p-resultats').addEventListener('click', function (ev) {
+    var b = ev.target.closest('button'); if (!b) return;
+    if (b.id === 'p-tout') { garder(colles); colles = []; $('#p-resultats').innerHTML = '<div class="vide"><b>Annonces enregistrées.</b>Retrouve-les dans « Mes annonces enregistrées ».</div>'; $('#p-texte').value = ''; }
+    else if (b.classList.contains('garder')) { garder([colles[+b.dataset.i]]); b.textContent = 'Enregistrée'; b.disabled = true; }
+  });
+
   aType.innerHTML = T.map(function (t) { return '<option value="' + esc(t) + '">' + esc(t) + '</option>'; }).join('');
   choisirType(T[0]);
 })();
