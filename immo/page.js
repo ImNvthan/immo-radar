@@ -191,7 +191,31 @@
     C.forEach(function (c) { var n = norm(c.c); if (!vus[n]) { vus[n] = 1; noms.push(n); } });
     noms.sort(function (a, b) { return b.length - a.length; });
   })();
-  var RE_URL = /https?:\/\/[^\s<>"')]+/gi;
+  /* Un lien d'annonce ne contient jamais le prix, mais souvent le type de bien et la commune. */
+  function depuisUrl(url) {
+    var chemin;
+    try { chemin = decodeURIComponent(new URL(url).pathname); } catch (e) { return {}; }
+    var slug = ' ' + norm(chemin.replace(/[\/_]/g, ' ')) + ' ', res = {};
+    if (/ (appartement|appart|studio|duplex|loft|t[1-6]|f[1-6]) /.test(slug)) res.type = 'Appartement';
+    else if (/ (maison|pavillon|villa|longere|fermette) /.test(slug)) res.type = 'Maison';
+    for (var i = 0; i < noms.length; i++) { if (slug.indexOf(' ' + noms[i] + ' ') >= 0) { res.commune = noms[i]; break; } }
+    var m = chemin.toLowerCase().match(/(\d{2,3})\s?m(?:2|²)/);
+    if (m) res.surface = parseFloat(m[1]);
+    return res;
+  }
+  aUrl.addEventListener('input', function () {
+    var u = aUrl.value.trim(), h = $('#url-aide');
+    if (!/^https?:\/\/\S+$/i.test(u)) { h.textContent = ''; return; }
+    var d = depuisUrl(u), trouve = [];
+    if (d.type && aType.value !== d.type) { choisirType(d.type); }
+    if (d.type) trouve.push(d.type.toLowerCase());
+    if (d.commune && !aCommune.value) { var c = trouverNorm(d.commune, aType.value) || trouverNorm(d.commune, null); if (c) { aCommune.value = c.c; trouve.push(c.c); } }
+    if (d.surface && !aSurface.value) { aSurface.value = d.surface; trouve.push(d.surface + ' m²'); }
+    h.textContent = trouve.length ? 'Lu dans le lien : ' + trouve.join(', ') + '. Il reste à saisir le prix' + (aSurface.value ? '' : ' et la surface') + '.' :
+      'Ce lien ne contient ni commune ni type de bien. Saisis les informations de l’annonce ou colle son texte plus bas.';
+    resultatLive();
+  });
+  var RE_URL =/https?:\/\/[^\s<>"')]+/gi;
   function lireNombre(s) { return parseFloat(String(s).replace(/[\s  .]/g, '').replace(',', '.')); }
   function analyserBloc(txt, urlBloc) {
     var t = txt.replace(/\s+/g, ' ');
@@ -203,7 +227,8 @@
     for (var i = 0; i < noms.length; i++) { if (n.indexOf(' ' + noms[i] + ' ') >= 0) { commune = noms[i]; break; } }
     var type = /\b(appartement|appart|studio|duplex|loft)\b|\b[tf][1-6]\b/i.test(t) ? 'Appartement' :
       /\b(maison|pavillon|villa|longere|longère|fermette)\b/i.test(t) ? 'Maison' : etat.type;
-    var nom = null;
+    var nom = null, uu = urlBloc || ((t.match(/https?:\/\/[^\s<>"')]+/i) || [''])[0]);
+    if (uu) { var du = depuisUrl(uu); if (!commune && du.commune) commune = du.commune; if (!surface && du.surface) surface = du.surface; if (du.type && !/\b(appartement|maison)/i.test(t)) type = du.type; }
     if (commune) { var c = trouverNorm(commune, type) || trouverNorm(commune, null); nom = c ? c.c : null; }
     var u = urlBloc || ((t.match(/https?:\/\/[^\s<>"')]+/i) || [''])[0]);
     return { type: type, commune: nom || '', surface: surface || 0, prix: prix || 0, loyer: 0, url: /^https?:\/\//i.test(u) ? u : '', ok: !!(nom && surface && prix) };

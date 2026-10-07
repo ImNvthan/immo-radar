@@ -138,6 +138,7 @@ button.btn.sec{background:transparent;color:var(--encre);border:1.5px solid var(
 .opp .suppr{font:inherit;font-size:.85rem;background:transparent;border:0;color:var(--doux);text-decoration:underline;cursor:pointer;padding:6px 0;text-align:left}
 .sous-titre{font-family:var(--display);font-weight:800;letter-spacing:-.03em;font-size:1.5rem;margin:40px 0 14px}
 .coller{margin-top:14px}
+.aide{color:var(--doux);font-size:.85rem}
 .coller summary{cursor:pointer;font-weight:700;font-size:1.1rem;min-height:32px}
 .coller[open] summary{margin-bottom:12px}
 .champ textarea{font:inherit;color:var(--encre);background:var(--papier);border:1.5px solid var(--trait);border-radius:14px;padding:12px 14px;width:100%;resize:vertical}
@@ -365,8 +366,8 @@ def bloc_criteres(meta) -> str:
     return ("<section class='criteres js-only' aria-label='Mes critères'><div class='wrap'><div class='carte'>"
             "<p class='mono'>Mes critères</p>"
             "<div class='champs'>"
-            "<div class='champ'><label for='c-budget'>Budget maximum (€)</label><input id='c-budget' type='number' inputmode='numeric' min='0' step='5000' placeholder='Sans limite'></div>"
-            "<div class='champ'><label for='c-surface'>Surface minimale (m²)</label><input id='c-surface' type='number' inputmode='numeric' min='0' step='5' placeholder='Sans minimum'></div>"
+            "<div class='champ'><label for='c-budget'>Budget maximum (€)</label><input id='c-budget' type='number' inputmode='numeric' min='0' step='any' placeholder='Sans limite'></div>"
+            "<div class='champ'><label for='c-surface'>Surface minimale (m²)</label><input id='c-surface' type='number' inputmode='numeric' min='0' step='any' placeholder='Sans minimum'></div>"
             "<div class='champ'><label for='c-q'>Chercher une commune</label><input id='c-q' type='search' autocomplete='off' placeholder='Le Mans, La Flèche…'></div>"
             "<div class='champ'><label for='c-tri'>Trier par</label><select id='c-tri'><option value='rendement'>Rendement brut</option>"
             "<option value='prix'>Prix au m² le plus bas</option><option value='evolution'>Baisse de prix sur 12 mois</option><option value='ventes'>Nombre de ventes</option></select></div>"
@@ -377,15 +378,15 @@ def bloc_criteres(meta) -> str:
 
 
 def bloc_analyseur() -> str:
-    return ("<section class='bloc js-only' id='analyseur'><div class='wrap'><p class='mono'>Annonce</p><h2>Teste une annonce <span id='nb-annonces'></span></h2>"
+    return ("<section class='bloc js-only' id='analyseur'><div class='wrap'><p class='mono'>Annonce</p><h2>Teste une annonce</h2>"
             "<p class='intro'>Recopie le prix et la surface d'une annonce vue ailleurs. Le radar la compare aux ventes réelles de la commune et estime le rendement net.</p>"
             "<div class='carte'><form id='form-annonce' autocomplete='off'><div class='champs'>"
             "<div class='champ'><label for='a-type'>Type de bien</label><select id='a-type'></select></div>"
             "<div class='champ'><label for='a-commune'>Commune</label><input id='a-commune' list='liste-noms' placeholder='Commence à taper…'></div>"
             "<div class='champ'><label for='a-surface'>Surface (m²)</label><input id='a-surface' type='number' inputmode='decimal' min='0' step='any'></div>"
-            "<div class='champ'><label for='a-prix'>Prix affiché (€)</label><input id='a-prix' type='number' inputmode='numeric' min='0' step='1000'></div>"
-            "<div class='champ'><label for='a-loyer'>Loyer visé (€/m², facultatif)</label><input id='a-loyer' type='number' inputmode='decimal' min='0' step='0.1' placeholder='Loyer du marché'></div>"
-            "<div class='champ'><label for='a-url'>Lien de l'annonce (facultatif)</label><input id='a-url' type='url' placeholder='https://…'></div>"
+            "<div class='champ'><label for='a-prix'>Prix affiché (€)</label><input id='a-prix' type='number' inputmode='numeric' min='0' step='any'></div>"
+            "<div class='champ'><label for='a-loyer'>Loyer visé (€/m², facultatif)</label><input id='a-loyer' type='number' inputmode='decimal' min='0' step='any' placeholder='Loyer du marché'></div>"
+            "<div class='champ'><label for='a-url'>Lien de l'annonce</label><input id='a-url' type='url' placeholder='https://…'><small id='url-aide' class='aide' aria-live='polite'></small></div>"
             "</div><datalist id='liste-noms'></datalist>"
             "<div id='resultat' class='resultat' aria-live='polite'></div>"
             "<div class='actions'><button type='submit' class='btn' id='a-enreg' disabled>Enregistrer l'annonce</button></div></form></div>"
@@ -395,7 +396,7 @@ def bloc_analyseur() -> str:
             "<div class='champ'><label for='p-texte'>Texte copié</label><textarea id='p-texte' rows='8' placeholder='Maison 4 pièces, Sablé-sur-Sarthe, 95 m², 189 000 €&#10;https://…'></textarea></div>"
             "<div class='actions'><button type='button' class='btn' id='p-analyser'>Analyser le texte</button></div>"
             "<div id='p-resultats' class='resultat' aria-live='polite'></div></details>"
-            "<h3 class='sous-titre'>Mes annonces enregistrées</h3><div id='mes-annonces'></div></div></section>")
+            "<h3 class='sous-titre'>Mes annonces enregistrées <span id='nb-annonces'></span></h3><div id='mes-annonces'></div></div></section>")
 
 
 def bloc_opportunites(opp) -> str:
